@@ -1,0 +1,31 @@
+{
+  "veiculos": [
+    {
+      "id": 1,
+      "placa": "LOT4654",
+      "chassi": "123093",
+      "renavam": "134567890",
+      "marca": "Toyoya",
+      "modelo": "civic",
+      "ano": "2022"
+    },
+    {
+      "id": 2,
+      "placa": "LOT4654",
+      "chassi": "123093",
+      "renavam": "134567890",
+      "marca": "Toyoya",
+      "modelo": "civic",
+      "ano": "2022"
+    },
+    {
+      "id": 3,
+      "placa": "LOT4654",
+      "chassi": "123093",
+      "renavam": "134567890",
+      "marca": "Fiat",
+      "modelo": "civic",
+      "ano": "2022"
+    }
+  ]
+}

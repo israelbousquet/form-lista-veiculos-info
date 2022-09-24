@@ -1,0 +1,130 @@
+<div class="container-form">
+  <div class="form">
+    <form
+      action="#"
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+      #formDir="ngForm"
+    >
+      <div class="form-group">
+        <h2 class="col-span-total font-1xl">Dados do Veículo</h2>
+        <div class="row">
+          <div class="input-box col-md-2">
+            <label for="id">ID</label>
+            <input type="number" id="id" formControlName="id" />
+            <app-error-msg
+              [control]="getCampo('id')"
+              label="Id"
+            ></app-error-msg>
+          </div>
+
+          <div class="input-box col-md-3">
+            <label for="placa">Placa</label>
+            <input
+              type="text"
+              id="placa"
+              formControlName="placa"
+              class="input-uppercase"
+            />
+            <app-error-msg
+              [control]="getCampo('placa')"
+              label="Placa"
+            ></app-error-msg>
+          </div>
+
+          <div class="input-box col-md-4">
+            <label for="chassi">Chassi</label>
+            <input type="text" id="chassi" formControlName="chassi" />
+            <app-error-msg
+              [control]="getCampo('chassi')"
+              label="Chassi"
+            ></app-error-msg>
+          </div>
+
+          <div class="input-box col-md-3">
+            <label for="renavam">Renavam</label>
+            <input
+              type="text"
+              id="renavam"
+              formControlName="renavam"
+              [mask]="'000000000'"
+            />
+            <app-error-mask
+              *ngIf="validatorError('renavam', 'mask')"
+              maskLength="9"
+            ></app-error-mask>
+            <app-error-msg
+              [control]="getCampo('renavam')"
+              label="Renavam"
+            ></app-error-msg>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-box col-md-4">
+            <label for="marca">Marca</label>
+            <div class="form-input">
+              <input
+                type="text"
+                id="marca"
+                formControlName="marca"
+                (keyup)="consultaFipe(this.form.get('marca')!.value)"
+              />
+
+              <div class="marcasList" *ngIf="filterFipeArray.length">
+                <ul>
+                  <li
+                    *ngFor="let item of filterFipeArray"
+                    (click)="setValueFipe(item.nome)"
+                  >
+                    {{ item.nome }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <app-error-msg
+              [control]="getCampo('marca')"
+              label="Marca"
+            ></app-error-msg>
+          </div>
+
+          <div class="input-box col-md-4">
+            <label for="modelo">Modelo</label>
+            <input type="text" id="modelo" formControlName="modelo" />
+            <app-error-msg
+              [control]="getCampo('modelo')"
+              label="Modelo do Veículo"
+            ></app-error-msg>
+          </div>
+
+          <div class="input-box col-md-4">
+            <label for="ano">Ano</label>
+            <input type="text" id="ano" formControlName="ano" />
+            <app-error-msg
+              [control]="getCampo('ano')"
+              label="ano"
+            ></app-error-msg>
+          </div>
+        </div>
+
+        <div class="btn-container">
+          <div class="btn-submit">
+            <button
+              class="btn-save"
+              type="submit"
+              (click)="enviarValorVeiculos()"
+            >
+              Salvar
+            </button>
+          </div>
+
+          <div class="btn-submit">
+            <button class="btn-resetar" (click)="resetFormulario()">
+              Limpar
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

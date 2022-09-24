@@ -1,0 +1,214 @@
+.container-form {
+  width: 85%;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form {
+  width: 100%;
+  background-color: var(--color-0);
+
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+
+  padding: 4rem;
+
+  border-radius: 20px;
+}
+
+@media (max-width: 750px) {
+  .form {
+    padding: 1.8rem;
+  }
+
+  .container-form {
+    width: 92%;
+  }
+}
+
+.btn-container{
+  display: flex;
+  gap: 1rem;
+
+  width: 100%;
+
+  margin-top: 1rem;
+}
+
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background-color: var(--color-principal);
+  color: var(--color-0);
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  transition: 0.2s ease-in-out;
+}
+
+button[disabled] {
+  background-color: var(--color-3);
+  cursor: text;
+}
+
+button[disabled]:hover {
+  background-color: var(--color-disabled-hover);
+}
+
+button:hover {
+  background-color: var(--color-principal-hover);
+}
+
+.btn-resetar{
+  background-color: var(--color-reset);
+}
+
+.btn-resetar:hover{
+  background-color: var(--color-reset-hover);
+}
+
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.input-box input.disabled-input {
+  background-color: var(--color-4);
+}
+
+.input-box input {
+  padding: 0.6rem 0.9rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 0px 1px #0e0e0e21;
+  width: 100%;
+
+  /* transition: box-shadow .1s ease-in-out; */
+}
+
+.input-uppercase {
+  text-transform: uppercase;
+}
+
+.input-box input[readonly] {
+  background-color: var(--color-4);
+}
+
+.input-box input[readonly]:hover {
+  box-shadow: 0px 0px 0px 1px #0e0e0e21;
+}
+
+.input-box input[readonly]:focus {
+  box-shadow: 0px 0px 0px 1px #0e0e0e21;
+}
+
+.input-box input:hover,
+.input-box select:hover {
+  box-shadow: 0px 0px 6px var(--color-principal-light);
+}
+
+.input-box input:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 0px 2px var(--color-principal);
+}
+
+.input-box input::placeholder {
+  color: var(--color-2);
+  font-size: 0.9rem;
+}
+
+.input-box label {
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: var(--color-1);
+  margin-bottom: 0.7rem;
+}
+
+.icon {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  font-size: 1rem;
+  color: var(--color-principal);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marcasList {
+  position: absolute;
+  max-height: 200px;
+  min-width: 200px;
+
+  display: flex;
+  justify-content: flex-start;
+
+  padding: 20px;
+  border-radius: 5px;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  top: 2.4rem;
+  right: 0;
+
+  z-index: 2500;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  color: var(--color-2);
+
+  background-color: var(--color-0);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.marcasList ul {
+  width: 100%;
+}
+
+.marcasList li {
+  cursor: pointer;
+  padding: 10px 0px;
+  width: 100%;
+
+  transition: 0.15s ease-in-out;
+}
+
+.marcasList li:hover {
+  color: var(--color-principal);
+}
+
+.marcasList li ~ li {
+  border-top: 1px solid var(--color-4);
+}
+
+@media (max-width: 600px) {
+  .marcasList {
+    width: 100%;
+  }
+}
+
