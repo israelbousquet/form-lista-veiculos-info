@@ -93,6 +93,12 @@ button:hover {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .input-box ~ .input-box{
+    margin-top: 15px;
+  }
+}
+
 .input-box input.disabled-input {
   background-color: var(--color-4);
 }
@@ -172,7 +178,7 @@ button:hover {
   overflow-y: scroll;
   overflow-x: hidden;
 
-  top: 2.4rem;
+  top: 5rem;
   right: 0;
 
   z-index: 2500;

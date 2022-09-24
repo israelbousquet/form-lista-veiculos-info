@@ -6,17 +6,20 @@ import { AppComponent } from './app.component';
 
 //modules
 import { FormModule } from './modules/form/form.module';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { SharedModule } from './modules/shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormModule
+    FormModule,
+    ModalModule.forRoot(),
+    SharedModule,
   ],
+  exports: [ModalModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

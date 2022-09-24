@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { ColorList } from '../interfaces/color-list';
 import { FipeList } from '../interfaces/fipe-list';
 
 @Injectable({

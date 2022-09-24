@@ -18,6 +18,7 @@ import { VeiculoList } from '../../interfaces/veiculo-list';
 
 //services
 import { ListsService } from './../../services/lists.service';
+import { VeiculosService } from '../../services/veiculos.service';
 
 @Component({
   selector: 'app-form',
@@ -38,7 +39,7 @@ export class FormComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private listsService: ListsService,
-    private http: HttpClient
+    private veiculosService: VeiculosService
   ) {}
 
   ngOnInit(): void {
@@ -65,14 +66,14 @@ export class FormComponent implements OnInit {
     });
   }
 
-  enviarValorVeiculos() {
-    this.veiculosArray = this.form.value;
-    this.emitVeiculosList.emit(this.veiculosArray);
-
-    this.form.reset();
+  onSave() {
+    this.veiculosService.postVeiculo(this.form.value).subscribe({
+      next: (sucess) => console.log(sucess),
+      error: (error) => console.log(error),
+    });
   }
 
-  resetFormulario() {
+  onReset() {
     this.form.reset();
   }
 

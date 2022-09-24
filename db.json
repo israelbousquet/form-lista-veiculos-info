@@ -26,6 +26,60 @@
       "marca": "Fiat",
       "modelo": "civic",
       "ano": "2022"
+    },
+    {
+      "id": 123,
+      "placa": "LUT7864",
+      "chassi": "dadad123443",
+      "renavam": "123123312",
+      "marca": "GEELY",
+      "modelo": "siena",
+      "ano": "2021"
+    },
+    {
+      "id": 423,
+      "placa": "312312312312",
+      "chassi": "213",
+      "renavam": "",
+      "marca": "",
+      "modelo": "",
+      "ano": ""
+    },
+    {
+      "id": 999,
+      "placa": "ACC4433",
+      "chassi": "543434534343",
+      "renavam": "345343434",
+      "marca": "Honda",
+      "modelo": "CITY",
+      "ano": "2021"
+    },
+    {
+      "id": 564,
+      "placa": "LUT7864",
+      "chassi": "dadad123443",
+      "renavam": "213123123",
+      "marca": "Gurgel",
+      "modelo": "city",
+      "ano": "2022"
+    },
+    {
+      "id": 4,
+      "placa": "LOR0811",
+      "chassi": "8888888",
+      "renavam": "",
+      "marca": "",
+      "modelo": "",
+      "ano": ""
+    },
+    {
+      "id": 5,
+      "placa": "LUT7864",
+      "chassi": "8888888",
+      "renavam": "999999999",
+      "marca": "Ford",
+      "modelo": "ka",
+      "ano": "2021"
     }
   ]
 }

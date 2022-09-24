@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-//pages
-import { HomeComponent } from './modules/form/pages/home/home.component';
+//components
+import { FormComponent } from './modules/form/components/form/form.component';
+import { ListaVeiculosComponent } from './modules/form/components/lista-veiculos/lista-veiculos.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent}
+  {path: '', component: ListaVeiculosComponent},
+  {path: 'novo', component: FormComponent},
+  {path: 'editar/:id', component: FormComponent},
 ];
 
 @NgModule({
