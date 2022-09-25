@@ -14,11 +14,11 @@ import { SharedModule } from './modules/shared/shared.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormModule,
     ModalModule.forRoot(),
     SharedModule,
+    FormModule,
   ],
-  exports: [ModalModule],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent],
 })

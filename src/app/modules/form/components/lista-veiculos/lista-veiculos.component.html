@@ -12,44 +12,46 @@
 </section>
 
 <div class="table-container">
-  <table
-    class="styled-table"
-    *ngIf="veiculos$ | async as veiculos; else loading"
-  >
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Placa</th>
-        <th>Chassi</th>
-        <th>Renavam</th>
-        <th>Modelo</th>
-        <th>Marca</th>
-        <th>Ano</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let veiculo of veiculos">
-        <td data-title="ID">{{ veiculo.id }}</td>
-        <td data-title="Placa">{{ veiculo.placa }}</td>
-        <td data-title="Chassi">{{ veiculo.chassi }}</td>
-        <td data-title="Renavam">{{ veiculo.renavam }}</td>
-        <td data-title="Modelo">{{ veiculo.modelo }}</td>
-        <td data-title="Marca">{{ veiculo.marca }}</td>
-        <td data-title="Ano">{{ veiculo.ano }}</td>
-        <td>
-          <div class="actions">
-            <div class="edit-btn">
-              <button>Editar</button>
+  <div class="table-content">
+    <table
+      class="styled-table"
+      *ngIf="veiculos$ | async as veiculos; else loading"
+    >
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Placa</th>
+          <th>Chassi</th>
+          <th>Renavam</th>
+          <th>Modelo</th>
+          <th>Marca</th>
+          <th>Ano</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let veiculo of veiculos">
+          <td data-title="ID">{{ veiculo.id }}</td>
+          <td data-title="Placa">{{ veiculo.placa }}</td>
+          <td data-title="Chassi">{{ veiculo.chassi }}</td>
+          <td data-title="Renavam">{{ veiculo.renavam }}</td>
+          <td data-title="Modelo">{{ veiculo.modelo }}</td>
+          <td data-title="Marca">{{ veiculo.marca }}</td>
+          <td data-title="Ano">{{ veiculo.ano }}</td>
+          <td>
+            <div class="actions">
+              <div class="edit-btn">
+                <button>Editar</button>
+              </div>
+              <div class="delete-btn">
+                <button>Excluir</button>
+              </div>
             </div>
-            <div class="delete-btn">
-              <button>Excluir</button>
-            </div>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   <ng-template #loading>
     <span>Carregando veículos</span>
   </ng-template>

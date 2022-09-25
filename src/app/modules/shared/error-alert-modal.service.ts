@@ -10,9 +10,21 @@ export class ErrorAlertModalService {
 
   constructor(private modalService: BsModalService) {}
 
-  alertError(message: string) {
+  private showAlert(message: string, tipo: string, timeOut?: number) {
     const bsModalRef: BsModalRef = this.modalService.show(ErrorAlertComponent);
-    bsModalRef.content.type = 'danger';
+    bsModalRef.content.tipo = tipo;
     bsModalRef.content.message = message;
+
+    if(timeOut){
+      setTimeout(() => bsModalRef.hide(), timeOut)
+    }
+  }
+
+  alertError(message: string) {
+    this.showAlert(message, 'erro', 2000);
+  }
+
+  alertSucess(message: string) {
+    this.showAlert(message, 'sucess', 2000);
   }
 }

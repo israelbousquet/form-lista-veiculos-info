@@ -1,145 +1,3 @@
-/* .lista-veiculos-container {
-  width: 90%;
-  margin: 0 auto;
-
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  background-color: var(--color-0);
-  border: 1.5px solid var(--color-4);
-
-  border-radius: 10px;
-  padding: 20px 10px;
-}
-
-.lista-veiculos-container ~ .lista-veiculos-container {
-  margin-top: 1rem;
-}
-
-.lista-veiculo {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.lista-veiculo-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.lista-veiculo-item h2 {
-  justify-self: center;
-  text-align: center;
-
-  background-color: var(--color-4);
-  padding: 5px 15px;
-
-  border-radius: 5px;
-  font-size: 0.8rem;
-
-  color: var(--color-3);
-}
-
-.lista-veiculo-item p {
-  margin-top: 10px;
-
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--color-1);
-}
-
-.lista-veiculos-btn {
-  display: flex;
-  gap: 1rem;
-}
-
-.lista-veiculos-btn button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: none;
-  color: var(--color-0);
-  padding: 0.7rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 1px;
-  font-size: 0.7rem;
-
-  transition: 0.2s ease-in-out;
-}
-
-.edit-btn button {
-  background-color: var(--color-green);
-}
-
-.edit-btn button:hover {
-  background-color: var(--color-green-hover);
-}
-
-.delete-btn button {
-  border: 1px solid var(--color-red);
-  background-color: var(--color-0);
-
-  color: var(--color-red);
-}
-
-.delete-btn button:hover {
-  background-color: var(--color-red-hover);
-
-  color: var(--color-0);
-}
-
-.lista-titles-container {
-  width: 85%;
-  margin: 0 auto;
-  max-height: 70px;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-
-  background: var(--color-4);
-  border-radius: 10px;
-}
-.lista-titles {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-
-  text-align: center;
-  color: var(--color-2);
-  font-size: 1rem;
-  font-weight: 600;
-
-  width: 80%;
-}
-
-.lista-titles h2 {
-  border-right: 2px solid white;
-  padding: 20px 0;
-}
-
-.lista-dados {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-}
-
-.container-veiculos-geral {
-  width: 85%;
-  margin: 0 auto;
-
-  background-color: red;
-} */
-
 .actions {
   display: flex;
   gap: 20px;
@@ -254,7 +112,7 @@ button {
 }
 
 .table-container {
-  width: 80%;
+  width: 100%;
   margin: auto;
 
   display: flex;
@@ -262,18 +120,22 @@ button {
   justify-content: center;
 }
 
-.styled-table {
+.table-content {
   border-collapse: collapse;
   margin: 0 auto;
-  width: 100%;
+  width: 85%;
 
   font-size: 0.9em;
   min-width: 400px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-  border-radius: 10px;
+  padding: 1.5rem;
 
-  padding: 2rem;
+  border-radius: 20px;
+}
+
+.styled-table {
+  width: 100%;
 }
 
 .styled-table thead tr {
@@ -298,12 +160,14 @@ button {
 .styled-table tbody tr {
   border-bottom: 1px solid #dddddd;
   transition: 0.15s ease-in-out;
+
+  background-color: var(--color-0);
+}
+
+.styled-table tbody tr:last-child {
+  border: none;
 }
 
 .styled-table tbody tr:hover {
   background-color: var(--color-5);
-}
-
-.styled-table tbody tr:last-of-type {
-  border-bottom: 2px solid var(--color-principal);
 }

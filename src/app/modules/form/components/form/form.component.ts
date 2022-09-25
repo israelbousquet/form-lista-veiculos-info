@@ -1,13 +1,10 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ErrorAlertModalService } from 'src/app/modules/shared/error-alert-modal.service';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import {
   FormBuilder,
   Validators,
   FormGroup,
-  FormControl,
 } from '@angular/forms';
-
-import * as JsonToXML from 'js2xmlparser';
-import { HttpClient } from '@angular/common/http';
 
 //validators
 import { Validacoes } from '../../Validators/valicacoes';
@@ -19,6 +16,7 @@ import { VeiculoList } from '../../interfaces/veiculo-list';
 //services
 import { ListsService } from './../../services/lists.service';
 import { VeiculosService } from '../../services/veiculos.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -39,7 +37,9 @@ export class FormComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private listsService: ListsService,
-    private veiculosService: VeiculosService
+    private veiculosService: VeiculosService,
+    private errorAlertModalService: ErrorAlertModalService,
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -68,10 +68,20 @@ export class FormComponent implements OnInit {
 
   onSave() {
     this.veiculosService.postVeiculo(this.form.value).subscribe({
-      next: (sucess) => console.log(sucess),
-      error: (error) => console.log(error),
+      next: (sucess) => {
+        this.router.navigate(['']);
+        this.errorAlertModalService.alertSucess(
+          'Veículo cadastrado com sucesso!'
+        )
+      },
+      error: (error) =>
+        this.errorAlertModalService.alertError(
+          'Erro ao cadastrar veículo. Tente novamente!'
+        ),
     });
   }
+
+  changeRoute() {}
 
   onReset() {
     this.form.reset();
