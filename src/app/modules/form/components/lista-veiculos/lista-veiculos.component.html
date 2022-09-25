@@ -26,11 +26,11 @@
           <th>Modelo</th>
           <th>Marca</th>
           <th>Ano</th>
-          <th></th>
+          <th>Ações</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let veiculo of veiculos">
+        <tr *ngFor="let veiculo of veiculos" class="veiculo-lista-item">
           <td data-title="ID">{{ veiculo.id }}</td>
           <td data-title="Placa">{{ veiculo.placa }}</td>
           <td data-title="Chassi">{{ veiculo.chassi }}</td>
@@ -38,7 +38,7 @@
           <td data-title="Modelo">{{ veiculo.modelo }}</td>
           <td data-title="Marca">{{ veiculo.marca }}</td>
           <td data-title="Ano">{{ veiculo.ano }}</td>
-          <td>
+          <td data-title="Ações">
             <div class="actions">
               <div class="edit-btn">
                 <button (click)="onEdit(veiculo.id)">Editar</button>
