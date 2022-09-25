@@ -5,7 +5,7 @@
       "placa": "LOT4654",
       "chassi": "123093",
       "renavam": "134567890",
-      "marca": "Toyoya",
+      "marca": "Gurgel",
       "modelo": "civic",
       "ano": "2022"
     },
@@ -29,39 +29,12 @@
     },
     {
       "id": 4,
-      "placa": "LUT7864",
-      "chassi": "dadad123443",
-      "renavam": "948938383",
-      "marca": "Fibravan",
-      "modelo": "ka",
-      "ano": "2014"
-    },
-    {
-      "id": 6,
-      "placa": "",
-      "chassi": "",
-      "renavam": "",
-      "marca": "",
-      "modelo": "",
-      "ano": ""
-    },
-    {
-      "id": 7,
-      "placa": null,
-      "chassi": null,
-      "renavam": null,
-      "marca": null,
-      "modelo": null,
-      "ano": null
-    },
-    {
-      "id": 8,
-      "placa": null,
-      "chassi": null,
-      "renavam": null,
-      "marca": null,
-      "modelo": null,
-      "ano": null
+      "placa": "LOT4654",
+      "chassi": "123093",
+      "renavam": "134567890",
+      "marca": "Gurgel",
+      "modelo": "civic",
+      "ano": "2022"
     }
   ]
 }

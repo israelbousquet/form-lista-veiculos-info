@@ -1,10 +1,6 @@
 import { ErrorAlertModalService } from 'src/app/modules/shared/error-alert-modal.service';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import {
-  FormBuilder,
-  Validators,
-  FormGroup,
-} from '@angular/forms';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 //validators
 import { Validacoes } from '../../Validators/valicacoes';
@@ -16,7 +12,8 @@ import { VeiculoList } from '../../interfaces/veiculo-list';
 //services
 import { ListsService } from './../../services/lists.service';
 import { VeiculosService } from '../../services/veiculos.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { map, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-form',
@@ -40,6 +37,7 @@ export class FormComponent implements OnInit {
     private veiculosService: VeiculosService,
     private errorAlertModalService: ErrorAlertModalService,
     private router: Router,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -64,24 +62,50 @@ export class FormComponent implements OnInit {
     this.listsService.getFipe().subscribe({
       next: (res) => (this.fipeListArray = res),
     });
+
+    this.route.params
+      .pipe(
+        map((params: any) => params['id']),
+        switchMap((id) => this.veiculosService.editById(id))
+      )
+      .subscribe({
+        next: (veiculo) => this.setValuesForm(veiculo),
+      });
+  }
+
+  setValuesForm(dadosVeiculo: any) {
+    this.form.setValue(dadosVeiculo);
   }
 
   onSave() {
-    this.veiculosService.postVeiculo(this.form.value).subscribe({
-      next: (sucess) => {
-        this.router.navigate(['']);
-        this.errorAlertModalService.alertSucess(
-          'Veículo cadastrado com sucesso!'
-        )
-      },
-      error: (error) =>
-        this.errorAlertModalService.alertError(
-          'Erro ao cadastrar veículo. Tente novamente!'
-        ),
-    });
+    if (this.form.value.id) {
+      this.veiculosService.editVeiculo(this.form.value).subscribe({
+        next: (sucess) => {
+          this.router.navigate(['']);
+          this.errorAlertModalService.alertSucess(
+            'Veículo atualizado com sucesso!'
+          );
+        },
+        error: (error) =>
+          this.errorAlertModalService.alertError(
+            'Erro ao atualizar. Tente novamente!'
+          ),
+      });
+    } else {
+      this.veiculosService.postVeiculo(this.form.value).subscribe({
+        next: (sucess) => {
+          this.router.navigate(['']);
+          this.errorAlertModalService.alertSucess(
+            'Veículo cadastrado com sucesso!'
+          );
+        },
+        error: (error) =>
+          this.errorAlertModalService.alertError(
+            'Erro ao cadastrar veículo. Tente novamente!'
+          ),
+      });
+    }
   }
-
-  changeRoute() {}
 
   onReset() {
     this.form.reset();
@@ -94,7 +118,6 @@ export class FormComponent implements OnInit {
       const dadosNormalize = this.normalizeString(dado);
 
       if (textNormalize === dadosNormalize) {
-        console.log(dados.codigo);
         this.setValueFipe(dado);
         return null;
       }

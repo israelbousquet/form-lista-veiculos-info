@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Observable, catchError, of, Subject } from 'rxjs';
 import { ErrorAlertModalService } from 'src/app/modules/shared/error-alert-modal.service';
@@ -24,7 +25,9 @@ export class ListaVeiculosComponent implements OnInit {
 
   constructor(
     private veiculosService: VeiculosService,
-    private errorAlertModalService: ErrorAlertModalService
+    private errorAlertModalService: ErrorAlertModalService,
+    private router: Router,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -41,5 +44,9 @@ export class ListaVeiculosComponent implements OnInit {
     this.errorAlertModalService.alertError(
       'Erro ao carregar a lista. Tente novamente!'
     );
+  }
+
+  onEdit(id: number) {
+    this.router.navigate([`editar/${id}`], {relativeTo: this.route});
   }
 }

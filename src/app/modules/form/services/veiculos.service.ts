@@ -16,8 +16,15 @@ export class VeiculosService {
     return this.http.get<VeiculoList[]>(this.API).pipe(delay(1000));
   }
 
+  editById(id: any) {
+    return this.http.get<VeiculoList[]>(`${this.API}/${id}`).pipe(take(1));
+  }
+
   postVeiculo(veiculo: VeiculoList[]) {
     return this.http.post(this.API, veiculo).pipe(take(1));
   }
 
+  editVeiculo(veiculo: any) {
+    return this.http.put(`${this.API}/${veiculo.id}`, veiculo).pipe(take(1));
+  }
 }
