@@ -117,6 +117,7 @@ button:hover {
 
 .input-box input[readonly] {
   background-color: var(--color-4);
+  cursor: not-allowed;
 }
 
 .input-box input[readonly]:hover {

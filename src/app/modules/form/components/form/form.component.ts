@@ -47,7 +47,7 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      id: ['', [Validators.required]],
+      id: [''],
       placa: [
         '',
         [
