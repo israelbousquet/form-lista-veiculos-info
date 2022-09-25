@@ -148,14 +148,6 @@ export class FormComponent implements OnInit {
     }
   }
 
-  normalizeString(string: string) {
-    return string
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace('ë', 'e');
-  }
-
   setModelos(name: any) {
     this.form.patchValue({
       modelo: name,
@@ -172,10 +164,12 @@ export class FormComponent implements OnInit {
     this.filterFipeArray = [];
   }
 
-  resetValueFipe() {
-    this.form.patchValue({
-      marca: '',
-    });
+  normalizeString(string: string) {
+    return string
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace('ë', 'e');
   }
 
   getCampo(campo: string) {

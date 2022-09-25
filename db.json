@@ -1,31 +1,31 @@
 {
   "veiculos": [
     {
+      "id": 1,
+      "placa": "da232323",
+      "chassi": "56465656565",
+      "renavam": "999999999",
+      "marca": "Fiat",
+      "modelo": "asd",
+      "ano": "2022"
+    },
+    {
       "id": 2,
-      "placa": "LUT7864",
-      "chassi": "dadad123443",
-      "renavam": "948938383",
-      "marca": "Saturn",
-      "modelo": "TOYOTA",
-      "ano": "2021"
+      "placa": "da232323",
+      "chassi": "56465656565",
+      "renavam": "999999999",
+      "marca": "fi",
+      "modelo": "",
+      "ano": "2016"
     },
     {
       "id": 3,
-      "placa": "1231212",
-      "chassi": "8888888",
+      "placa": "da232323",
+      "chassi": "56465656565",
       "renavam": "948938383",
-      "marca": "Saturn",
-      "modelo": "modelo9",
+      "marca": "Fibravan",
+      "modelo": "asd",
       "ano": "2006"
-    },
-    {
-      "id": 4,
-      "placa": "LUT7864",
-      "chassi": "neidoca",
-      "renavam": "999999999",
-      "marca": "Toyota",
-      "modelo": "n sei",
-      "ano": "2013"
     }
   ]
 }

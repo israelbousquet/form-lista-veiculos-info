@@ -31,6 +31,14 @@ header {
   justify-content: space-between;
 }
 
+.header-title h1{
+  animation: showRight .2s;
+}
+
+.header-title img{
+  animation: showLeft .2s;
+}
+
 @media (max-width: 1000px) {
   header {
     background-size: cover;
