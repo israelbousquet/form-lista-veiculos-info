@@ -47,6 +47,10 @@ export class ListaVeiculosComponent implements OnInit {
   }
 
   onEdit(id: number) {
-    this.router.navigate([`editar/${id}`], {relativeTo: this.route});
+    this.router.navigate([`editar/${id}`], { relativeTo: this.route });
+  }
+
+  onRemove(veiculo: any) {
+    this.veiculosService.removeVeiculo(veiculo.id);
   }
 }

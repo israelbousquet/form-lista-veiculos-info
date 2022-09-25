@@ -20,11 +20,23 @@ export class VeiculosService {
     return this.http.get<VeiculoList[]>(`${this.API}/${id}`).pipe(take(1));
   }
 
-  postVeiculo(veiculo: VeiculoList[]) {
+  createVeiculo(veiculo: VeiculoList[]) {
     return this.http.post(this.API, veiculo).pipe(take(1));
   }
 
   editVeiculo(veiculo: any) {
     return this.http.put(`${this.API}/${veiculo.id}`, veiculo).pipe(take(1));
+  }
+
+  removeVeiculo(id: any){
+    return this.http.delete(`${this.API}/${id}`).pipe(take(1));
+  }
+
+  saveVeiculo(veiculo: any) {
+    if (veiculo.id) {
+      return this.editVeiculo(veiculo);
+    } else {
+      return this.createVeiculo(veiculo);
+    }
   }
 }

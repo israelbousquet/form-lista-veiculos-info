@@ -78,33 +78,18 @@ export class FormComponent implements OnInit {
   }
 
   onSave() {
-    if (this.form.value.id) {
-      this.veiculosService.editVeiculo(this.form.value).subscribe({
-        next: (sucess) => {
-          this.router.navigate(['']);
-          this.errorAlertModalService.alertSucess(
-            'Veículo atualizado com sucesso!'
-          );
-        },
-        error: (error) =>
-          this.errorAlertModalService.alertError(
-            'Erro ao atualizar. Tente novamente!'
-          ),
-      });
-    } else {
-      this.veiculosService.postVeiculo(this.form.value).subscribe({
-        next: (sucess) => {
-          this.router.navigate(['']);
-          this.errorAlertModalService.alertSucess(
-            'Veículo cadastrado com sucesso!'
-          );
-        },
-        error: (error) =>
-          this.errorAlertModalService.alertError(
-            'Erro ao cadastrar veículo. Tente novamente!'
-          ),
-      });
-    }
+    this.veiculosService.saveVeiculo(this.form.value).subscribe({
+      next: (sucess) => {
+        this.router.navigate(['']);
+        this.errorAlertModalService.alertSucess(
+          'Veículo cadastrado com sucesso!'
+        );
+      },
+      error: (error) =>
+        this.errorAlertModalService.alertError(
+          'Erro ao atualizar. Tente novamente!'
+        ),
+    });
   }
 
   onReset() {
