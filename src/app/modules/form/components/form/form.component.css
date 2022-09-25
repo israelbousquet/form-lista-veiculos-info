@@ -11,7 +11,11 @@
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 35px;
+}
+
+.form-group h1 {
+  animation: showRight 0.4s ease;
 }
 
 .form {
@@ -24,9 +28,20 @@
 
   border-radius: 20px;
 
-  animation: showUp .2s;
+  animation: showUp 0.2s;
 }
 
+@media (max-width: 1000px) {
+  .form {
+    padding: 2.8rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .container-form {
+    width: 95%;
+  }
+}
 
 @media (max-width: 750px) {
   .form {
@@ -53,10 +68,8 @@ button {
   justify-content: center;
 
   border: none;
-  background-color: var(--color-principal);
-  color: var(--color-0);
   padding: 0.7rem 1rem;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
 
   text-transform: uppercase;
@@ -66,6 +79,8 @@ button {
   transition: 0.2s ease-in-out;
 
   outline: none;
+
+  animation: showRight 0.4s ease;
 }
 
 button[disabled] {
@@ -77,16 +92,31 @@ button[disabled]:hover {
   background-color: var(--color-disabled-hover);
 }
 
-button:hover {
-  background-color: var(--color-principal-hover);
-}
-
 .btn-resetar {
-  background-color: var(--color-principal);
+  background-color: var(--color-0);
+  color: var(--color-red);
+  box-shadow: 0px 0px 0px 1px var(--color-red);
+
+  transition: 0.2s ease-in-out;
 }
 
 .btn-resetar:hover {
-  background-color: var(--color-reset-hover);
+  color: var(--color-red-hover);
+  background-color: var(--color-0);
+  box-shadow: 0px 0px 0px 1px var(--color-red-hover);
+
+  transform: scale(1.06);
+}
+
+.btn-save {
+  background-color: var(--color-green);
+  color: var(--color-0);
+  transition: 0.2s ease-in-out;
+}
+
+.btn-save:hover {
+  background-color: var(--color-green-hover);
+  transform: scale(1.06);
 }
 
 .input-box {
@@ -94,6 +124,7 @@ button:hover {
   flex-direction: column;
 
   position: relative;
+  animation: showUp 0.4s ease;
 }
 
 @media (max-width: 768px) {
@@ -216,21 +247,29 @@ button:hover {
   border-top: 1px solid var(--color-4);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .marcasList {
     width: 100%;
+  }
+
+  .modalPopupId {
+    left: 30%;
+    font-size: 0.5rem;
+    padding: 0.5rem 0.2rem;
+
+    width: 80px;
   }
 }
 
 .modalPopupId {
   font-size: 0.8rem;
   position: absolute;
-  bottom: -80%;
-  right: -25%;
+  top: 70px;
+  right: -40px;
 
   text-align: center;
 
-  width: 150%;
+  width: 150px;
   white-space: nowrap;
 
   padding: 0.8rem 0.4rem;
@@ -265,5 +304,3 @@ button:hover {
   display: block;
   opacity: 1;
 }
-
-

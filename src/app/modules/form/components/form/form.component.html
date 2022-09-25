@@ -90,23 +90,7 @@
 
           <div class="input-box col-md-5">
             <label for="modelo">Modelo</label>
-            <input
-              type="text"
-              id="modelo"
-              formControlName="modelo"
-              (keyup)="consultaModeloFipe(this.form.get('modelo')!.value)"
-              [readOnly]="getCampo('marca').value === ''"
-            />
-            <div class="marcasList" *ngIf="modelosFipeListFilter.length">
-              <ul>
-                <li
-                  *ngFor="let item of modelosFipeListFilter"
-                  (click)="setModelos(item.nome)"
-                >
-                  {{ item.nome }}
-                </li>
-              </ul>
-            </div>
+            <input type="text" id="modelo" formControlName="modelo" />
             <app-error-msg
               [control]="getCampo('modelo')"
               label="Modelo"

@@ -2,20 +2,20 @@
   "veiculos": [
     {
       "id": 1,
-      "placa": "da232323",
+      "placa": "sdadm1212",
       "chassi": "56465656565",
-      "renavam": "999999999",
-      "marca": "Fiat",
-      "modelo": "asd",
-      "ano": "2022"
+      "renavam": "948938383",
+      "marca": "VW - VolksWagen",
+      "modelo": "gol",
+      "ano": "2014"
     },
     {
       "id": 2,
-      "placa": "da232323",
+      "placa": "sdadm1212",
       "chassi": "56465656565",
-      "renavam": "999999999",
-      "marca": "fi",
-      "modelo": "",
+      "renavam": "948938383",
+      "marca": "VW - VolksWagen",
+      "modelo": "gol",
       "ano": "2016"
     },
     {
@@ -23,9 +23,9 @@
       "placa": "da232323",
       "chassi": "56465656565",
       "renavam": "948938383",
-      "marca": "Fibravan",
-      "modelo": "asd",
-      "ano": "2006"
+      "marca": "Honda",
+      "modelo": "gol",
+      "ano": "2014"
     }
   ]
 }

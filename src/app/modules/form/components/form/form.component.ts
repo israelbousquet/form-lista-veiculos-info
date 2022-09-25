@@ -14,7 +14,6 @@ import { ListsService } from './../../services/lists.service';
 import { VeiculosService } from '../../services/veiculos.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map, switchMap } from 'rxjs';
-import { ModelosFipeList } from '../../interfaces/modelos-fipe';
 
 @Component({
   selector: 'app-form',
@@ -27,10 +26,6 @@ export class FormComponent implements OnInit {
   public fipeListArray: Array<FipeList> = [];
 
   public filterFipeArray: Array<any> = [];
-
-  public modelosFipeList: any = [];
-
-  public modelosFipeListFilter: any = [];
 
   public veiculosArray: Array<VeiculoList> = [];
 
@@ -111,7 +106,6 @@ export class FormComponent implements OnInit {
 
       if (textNormalize === dadosNormalize) {
         this.setValueFipe(dado);
-        this.retornaLista(dados.codigo);
         return null;
       }
 
@@ -121,39 +115,6 @@ export class FormComponent implements OnInit {
     if (text === '') {
       this.filterFipeArray = [];
     }
-  }
-
-  retornaLista(codigo: any) {
-    this.listsService.getModelos(codigo).subscribe({
-      next: (dados: any) => (this.modelosFipeList = dados.modelos),
-    });
-  }
-
-  consultaModeloFipe(text: string) {
-    this.modelosFipeListFilter = this.modelosFipeList.filter((dados: any) => {
-      const dado = dados.nome;
-      const textNormalize = this.normalizeString(text);
-      const dadosNormalize = this.normalizeString(dado);
-
-      if (textNormalize === dadosNormalize) {
-        this.setModelos(dado);
-        return null;
-      }
-
-      return dadosNormalize.startsWith(textNormalize);
-    });
-
-    if (text === '') {
-      this.modelosFipeListFilter = [];
-    }
-  }
-
-  setModelos(name: any) {
-    this.form.patchValue({
-      modelo: name,
-    });
-
-    this.modelosFipeListFilter = [];
   }
 
   setValueFipe(name: any) {

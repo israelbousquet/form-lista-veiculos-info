@@ -74,7 +74,7 @@ button {
 .novo-veiculo h1 {
   color: var(--color-0);
 
-  animation: showRight .2s;
+  animation: showRight 0.2s;
 }
 
 .novo-veiculo button {
@@ -87,7 +87,7 @@ button {
 
   transition: 0.2s ease-in-out;
 
-  animation: showLeft .2s;
+  animation: showLeft 0.2s;
 }
 
 .novo-veiculo button:hover {
@@ -125,13 +125,14 @@ button {
   align-items: center;
   justify-content: center;
 
-  animation: showUp .25s;
+  animation: showUp 0.2s;
 }
 
 .table-content {
   border-collapse: collapse;
   margin: 0 auto;
-  width: 85%;
+
+  width: 95%;
 
   font-size: 0.9em;
   min-width: 400px;
@@ -155,22 +156,40 @@ button {
   border-bottom: 2px solid var(--color-4);
 }
 
+.styled-table thead tr th {
+  font-weight: 500;
+}
+.veiculo-lista-item td {
+  animation: showRight 0.4s ease;
+}
+
 .styled-table th,
 .styled-table td {
   padding: 2rem 2.5rem;
 }
+
+@media (max-width: 1500px) {
+  .styled-table th,
+  .styled-table td {
+    padding: 1.2rem 1rem;
+  }
+}
+
 .styled-table tbody tr td {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-1);
 }
 
 .styled-table tbody tr {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 3px solid var(--color-4);
   transition: 0.15s ease-in-out;
 
   background-color: var(--color-0);
+
+  padding: 20px 0px;
 }
+
 
 .styled-table tbody tr:last-child {
   border: none;
@@ -180,7 +199,7 @@ button {
   background-color: var(--color-5);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .styled-table thead {
     display: none;
   }
@@ -202,26 +221,32 @@ button {
   .styled-table td::before {
     content: attr(data-title);
     position: absolute;
-    left: 0;
+    left: 20px;
     width: 50%;
     text-align: left;
+
+    font-weight: 500;
+    color: var(--color-3);
   }
 
-  .styled-table td:last-child::before{
-    content: attr(data-title);
-    position: absolute;
-    left: 0;
+  .styled-table td:last-child::before {
     top: 40%;
-    width: 50%;
-    text-align: left;
+  }
+
+  .styled-table tbody tr:hover {
+    background-color: var(--color-0);
+  }
+
+  .styled-table tbody tr td:hover {
+    background-color: var(--color-5);
   }
 
   .styled-table th,
   .styled-table td {
-    padding: 1.3rem 2.5rem;
+    padding: 1.3rem 20px;
   }
 
-  .styled-table td{
+  .styled-table td:not(:first-child) {
     border-top: 1px solid var(--color-4);
   }
 
@@ -229,7 +254,7 @@ button {
     justify-content: flex-end;
   }
 
-  .table-content{
+  .table-content {
     width: 90%;
   }
 }
