@@ -2,12 +2,30 @@
   "veiculos": [
     {
       "id": 1,
-      "placa": "LOT4654",
-      "chassi": "123093",
-      "renavam": "134567890",
-      "marca": "Gurgel",
-      "modelo": "civic",
+      "placa": "LUT7864",
+      "chassi": "543434534343",
+      "renavam": "948938383",
+      "marca": "GEELY",
+      "modelo": "dodge model",
       "ano": "2022"
+    },
+    {
+      "id": 2,
+      "placa": "LUT7864",
+      "chassi": "dadad123443",
+      "renavam": "948938383",
+      "marca": "Saturn",
+      "modelo": "TOYOTA",
+      "ano": "2021"
+    },
+    {
+      "id": 3,
+      "placa": "1231212",
+      "chassi": "8888888",
+      "renavam": "948938383",
+      "marca": "Saturn",
+      "modelo": "modelo9",
+      "ano": "2006"
     }
   ]
 }

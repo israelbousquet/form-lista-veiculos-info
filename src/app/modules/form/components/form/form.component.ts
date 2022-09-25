@@ -78,17 +78,19 @@ export class FormComponent implements OnInit {
   }
 
   onSave() {
+    let msgSuccess = 'Veículo cadastrado com sucesso!';
+    let msgError = 'Erro ao cadastrar veículo. Tente novamente!';
+
+    if (this.form.value.id) {
+      msgSuccess = 'Veículo atualizado com sucesso!';
+      msgError = 'Erro ao atualizar veículo. Tente novamente!';
+    }
     this.veiculosService.saveVeiculo(this.form.value).subscribe({
-      next: (sucess) => {
+      next: (success) => {
         this.router.navigate(['']);
-        this.errorAlertModalService.alertSucess(
-          'Veículo cadastrado com sucesso!'
-        );
+        this.errorAlertModalService.alertSucess(msgSuccess);
       },
-      error: (error) =>
-        this.errorAlertModalService.alertError(
-          'Erro ao atualizar. Tente novamente!'
-        ),
+      error: (error) => this.errorAlertModalService.alertError(msgError),
     });
   }
 

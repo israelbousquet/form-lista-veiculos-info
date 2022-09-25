@@ -13,7 +13,7 @@ export class VeiculosService {
   constructor(private http: HttpClient) {}
 
   getListVeiculos() {
-    return this.http.get<VeiculoList[]>(this.API).pipe(delay(1000));
+    return this.http.get<VeiculoList[]>(this.API);
   }
 
   editById(id: any) {

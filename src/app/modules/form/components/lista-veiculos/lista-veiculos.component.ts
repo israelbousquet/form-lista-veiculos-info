@@ -31,13 +31,7 @@ export class ListaVeiculosComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.veiculos$ = this.veiculosService.getListVeiculos().pipe(
-      catchError((error) => {
-        console.log(error);
-        this.handleError();
-        return of();
-      })
-    );
+    this.onRefresh();
   }
 
   handleError() {
@@ -51,6 +45,18 @@ export class ListaVeiculosComponent implements OnInit {
   }
 
   onRemove(veiculo: any) {
-    this.veiculosService.removeVeiculo(veiculo.id);
+    this.veiculosService.removeVeiculo(veiculo.id).subscribe({
+      next: (sucess) => this.onRefresh(),
+    });
+  }
+
+  onRefresh() {
+    this.veiculos$ = this.veiculosService.getListVeiculos().pipe(
+      catchError((error) => {
+        console.log(error);
+        this.handleError();
+        return of();
+      })
+    );
   }
 }
