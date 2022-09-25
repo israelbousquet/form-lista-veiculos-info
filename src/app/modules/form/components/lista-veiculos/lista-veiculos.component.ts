@@ -46,7 +46,7 @@ export class ListaVeiculosComponent implements OnInit {
 
   onRemove(veiculo: any) {
     this.veiculosService.removeVeiculo(veiculo.id).subscribe({
-      next: (sucess) => this.onRefresh(),
+      next: (success) => this.onRefresh(),
     });
   }
 

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { FipeList } from '../interfaces/fipe-list';
+import { ModelosFipeList } from '../interfaces/modelos-fipe';
 
 @Injectable({
   providedIn: 'root',
@@ -16,9 +17,9 @@ export class ListsService {
     );
   }
 
-  // getModelos(value: string, codigo: number): Observable<Array<any>> {
-  //   return this.http.get<Array<any>>(
-  //     `https://parallelum.com.br/fipe/api/v1/${value}/marcas/${codigo}/modelos`
-  //   );
-  // }
+  getModelos(codigo: any): Observable<any> {
+    return this.http.get<Array<any>>(
+      `https://parallelum.com.br/fipe/api/v1/carros/marcas/${codigo}/modelos`
+    );
+  }
 }
