@@ -24,12 +24,6 @@ ng add ngx-bootstrap
 npm install ngx-bootstrap --save
 ```
 
-### Baixar biblioteca Bootstrap - (terminal)
-
-```
-npm install bootstrap
-```
-
 ### Servidor REST local
 
 #### Instalar serviço
