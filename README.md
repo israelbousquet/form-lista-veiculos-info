@@ -58,6 +58,14 @@ Assim será criado um server db.json com valor padrão
 
 `8.15.0`
 
+#### ngx-bootstrap
+
+`^9.0.0`
+
+#### ngx-mask
+
+`^14.2.3`
+
 #### Angular CLI
 
 ```
