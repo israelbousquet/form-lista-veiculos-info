@@ -38,7 +38,7 @@ export class Validacoes {
     const ano = formControl.value;
     const anoAtual = new Date().getFullYear();
 
-    if (ano > anoAtual + 2) {
+    if (ano.length === 4 && (ano > anoAtual + 2 || ano < anoAtual - 300)) {
       return { anoInvalido: true };
     } else {
       return false;

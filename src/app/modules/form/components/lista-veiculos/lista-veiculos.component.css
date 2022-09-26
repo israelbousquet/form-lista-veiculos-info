@@ -59,8 +59,6 @@ button {
 
   display: flex;
   align-items: center;
-
-  margin-bottom: 3rem;
 }
 
 .novo-veiculo {
@@ -100,6 +98,8 @@ button {
 .table-container {
   width: 100%;
   animation: showUp 0.2s;
+
+  padding: 60px 0;
 }
 
 .table-content {

@@ -80,6 +80,15 @@
       "marca": "NOVO",
       "modelo": "uhull",
       "ano": "2006"
+    },
+    {
+      "id": 10,
+      "placa": "LOT4567",
+      "chassi": "56465656565",
+      "renavam": "999999999",
+      "marca": "EDIT",
+      "modelo": "create",
+      "ano": "2022"
     }
   ]
 }
