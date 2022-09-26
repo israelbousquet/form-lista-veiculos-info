@@ -6,25 +6,27 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Baixar Angular CLI - (terminal)
+## Manual para rodar projeto
+
+### Baixar Angular CLI - (terminal)
 ```
 npm install -g @angular/cli
 ```
 
-## Baixar biblioteca ngx-mask - (terminal)
+### Baixar biblioteca ngx-mask - (terminal)
     npm i ngx-mask
   
-## Baixar biblioteca ngx-bootstrap - (terminal) - via Angular CLI
+### Baixar biblioteca ngx-bootstrap - (terminal) - via Angular CLI
 ```
 ng add ngx-bootstrap
 ```
 
-## Baixar biblioteca ngx-bootstrap - (terminal) - Manualmente
+### Baixar biblioteca ngx-bootstrap - (terminal) - Manualmente
 ```
 npm install ngx-bootstrap --save
 ```
 
-## Rodar servidor db-json
+### Rodar servidor db-json
 ```
 json-server --watch db.json
 ```
