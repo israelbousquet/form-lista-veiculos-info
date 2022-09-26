@@ -30,13 +30,27 @@ ng add ngx-bootstrap
 npm install ngx-bootstrap --save
 ```
 
-### Rodar servidor db-json
+### Baixar biblioteca Bootstrap - (terminal)
+
+```
+npm install bootstrap
+```
+
+### Servidor REST local
+
+#### Instalar serviço
+
+```
+npm install -g json-server
+```
+
+#### Rodar servidor
 
 ```
 json-server --watch db.json
 ```
 
-Caso deseje rodar seu próprio servidor
+Caso deseje criar seu próprio servidor
 
 ```
 npm i json-server
@@ -67,4 +81,5 @@ typescript                      4.7.4
 ```
 
 ### Detalhes
+
 Servidor rodando localmente, então o acesso ao github pages não terá todas as funcionalidades do projeto local
