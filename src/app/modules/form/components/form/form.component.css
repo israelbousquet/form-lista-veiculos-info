@@ -50,6 +50,7 @@
 
 .btn-container {
   display: flex;
+  justify-content: space-between;
   gap: 1rem;
 
   width: 100%;
@@ -57,25 +58,11 @@
   margin-top: 1rem;
 }
 
-button {
+.btn-container .left{
   display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: none;
-  padding: 0.7rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 1px;
-
-  transition: 0.2s ease-in-out;
-
-  outline: none;
-
+  gap: 1rem;
 }
+
 
 button[disabled] {
   background-color: var(--color-4);
@@ -98,19 +85,50 @@ button[disabled]:hover {
   color: var(--color-red-hover);
   background-color: var(--color-0);
   box-shadow: 0px 0px 0px 1px var(--color-red-hover);
+}
 
-  transform: scale(1.06);
+.btn-reload{
+  background-color: var(--color-0);
+  color: var(--color-3);
+  box-shadow: 0px 0px 0px 1px var(--color-4);
+
+  transition: 0.2s ease-in-out;
+}
+
+.btn-reload:hover{
+  background-color: var(--color-0);
+  color: var(--color-principal);
+  box-shadow: 0px 0px 0px 1px var(--color-principal);
+
 }
 
 .btn-save {
-  background-color: var(--color-green);
+  background-color: var(--color-principal);
   color: var(--color-0);
   transition: 0.2s ease-in-out;
 }
 
 .btn-save:hover {
-  background-color: var(--color-green-hover);
-  transform: scale(1.06);
+  background-color: var(--color-principal-hover);
+}
+
+@media(max-width: 768px){
+  .btn-container{
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .btn-container .left{
+    justify-content: space-between;
+  }
+
+  .btn-container .right{
+    margin: 0 auto;
+  }
+
+  .btn-container .right button{
+    font-size: .8rem;
+  }
 }
 
 .input-box {

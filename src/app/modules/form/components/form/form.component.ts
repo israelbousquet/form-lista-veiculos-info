@@ -104,6 +104,10 @@ export class FormComponent implements OnInit {
     });
   }
 
+  onReload() {
+    location.reload();
+  }
+
   consultaFipe(text: string) {
     this.filterFipeArray = this.fipeListArray.filter((dados) => {
       const dado = dados.nome;

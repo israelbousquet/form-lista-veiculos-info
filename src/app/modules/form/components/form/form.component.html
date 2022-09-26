@@ -118,19 +118,29 @@
         </div>
 
         <div class="btn-container">
-          <div class="btn-submit">
-            <button
-              class="btn-save"
-              [disabled]="!form.valid"
-              type="submit"
-              (click)="onSave()"
-            >
-              Salvar
-            </button>
+          <div class="left">
+            <div class="btn-submit">
+              <button
+                class="btn-save"
+                [disabled]="!form.valid"
+                type="submit"
+                (click)="onSave()"
+              >
+                Salvar
+              </button>
+            </div>
+
+            <div class="btn-submit">
+              <button class="btn-resetar" (click)="onReset()">Limpar</button>
+            </div>
           </div>
 
-          <div class="btn-submit">
-            <button class="btn-resetar" (click)="onReset()">Limpar</button>
+          <div class="right">
+            <div class="btn-submit">
+              <button class="btn-reload" type="submit" (click)="onReload()">
+                Dados Originais
+              </button>
+            </div>
           </div>
         </div>
       </div>
