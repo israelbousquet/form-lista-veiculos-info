@@ -32,7 +32,7 @@ Caso deseje rodar seu próprio servidor
 ```
 npm i json-server
 ```
-Assim será criado um server db.json
+Assim será criado um server db.json com valor padrão
 
 ## Versões
 
