@@ -15,7 +15,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 	-- comando: npm i ngx-mask
   
 ##Baixar biblioteca ngx-bootstrap
-	-- rodar comando no terminal
 
+	-- rodar comando no terminal
 	-- Angular CLI: ng add ngx-bootstrap
 	-- Manualmente: npm install ngx-bootstrap --save
