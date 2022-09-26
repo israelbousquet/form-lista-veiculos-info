@@ -75,7 +75,7 @@
     {
       "id": 9,
       "placa": "LOT4566",
-      "chassi": "NOVOOOoooo",
+      "chassi": "AAAAAAAAAAAAAAAAAAA",
       "renavam": "999999999",
       "marca": "NOVO",
       "modelo": "uhull",
@@ -83,11 +83,11 @@
     },
     {
       "id": 10,
-      "placa": "LOT4567",
-      "chassi": "56465656565",
+      "placa": "LOT4566",
+      "chassi": "NOVOOO",
       "renavam": "999999999",
-      "marca": "EDIT",
-      "modelo": "create",
+      "marca": "Fiat",
+      "modelo": "civic",
       "ano": "2022"
     }
   ]
