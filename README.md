@@ -7,8 +7,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Baixar Angular CLI - (terminal)
-  -- rodar comando no terminal 
-	-- npm install -g @angular/cli
+```
+npm install -g @angular/cli
+```
 
 ## Baixar biblioteca ngx-mask - (terminal)
     npm i ngx-mask
