@@ -13,7 +13,9 @@ export class VeiculosService {
   constructor(private http: HttpClient) {}
 
   getListVeiculos() {
-    return this.http.get<VeiculoList[]>(this.API);
+    return this.http.get<VeiculoList[]>(this.API).pipe(
+      delay(1000)
+    );
   }
 
   editById(id: any) {

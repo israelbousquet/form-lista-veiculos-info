@@ -9,6 +9,7 @@ import { ErrorAlertComponent } from 'src/app/modules/shared/error-alert/error-al
 
 //interface
 import { VeiculoList } from '../../interfaces/veiculo-list';
+import { CrudService } from '../../services/crud.service';
 
 //services
 import { VeiculosService } from '../../services/veiculos.service';
@@ -24,7 +25,7 @@ export class ListaVeiculosComponent implements OnInit {
   public error$ = new Subject<boolean>();
 
   constructor(
-    private veiculosService: VeiculosService,
+    private veiculosService: CrudService,
     private errorAlertModalService: ErrorAlertModalService,
     private router: Router,
     private route: ActivatedRoute

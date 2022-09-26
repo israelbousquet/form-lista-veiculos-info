@@ -119,7 +119,12 @@
 
         <div class="btn-container">
           <div class="btn-submit">
-            <button class="btn-save" type="submit" (click)="onSave()">
+            <button
+              class="btn-save"
+              [disabled]="!form.valid"
+              type="submit"
+              (click)="onSave()"
+            >
               Salvar
             </button>
           </div>

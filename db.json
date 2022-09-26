@@ -6,26 +6,44 @@
       "chassi": "56465656565",
       "renavam": "948938383",
       "marca": "VW - VolksWagen",
-      "modelo": "gol",
+      "modelo": "EDITEI DE NOVO",
       "ano": "2014"
     },
     {
       "id": 2,
       "placa": "sdadm1212",
       "chassi": "56465656565",
-      "renavam": "948938383",
+      "renavam": "999999999",
       "marca": "VW - VolksWagen",
       "modelo": "gol",
-      "ano": "2016"
+      "ano": "2021"
     },
     {
       "id": 3,
-      "placa": "da232323",
+      "placa": "sdadm1212",
       "chassi": "56465656565",
       "renavam": "948938383",
       "marca": "Honda",
-      "modelo": "gol",
-      "ano": "2014"
+      "modelo": "EDIT",
+      "ano": "2016"
+    },
+    {
+      "id": 4,
+      "placa": "LOT4566",
+      "chassi": "56465656565",
+      "renavam": "948938383",
+      "marca": "Fiat",
+      "modelo": "siena",
+      "ano": "2022"
+    },
+    {
+      "id": 5,
+      "placa": "LOT4567",
+      "chassi": "NOVOOO",
+      "renavam": "999999999",
+      "marca": "Fiat",
+      "modelo": "siena",
+      "ano": "2022"
     }
   ]
 }

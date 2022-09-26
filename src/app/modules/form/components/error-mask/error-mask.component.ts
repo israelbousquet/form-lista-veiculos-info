@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ErrorMaskComponent implements OnInit {
 
-  @Input() maskLength!: number;
+  @Input() maskLength!: string;
 
   constructor() { }
 

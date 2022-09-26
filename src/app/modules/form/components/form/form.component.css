@@ -80,7 +80,6 @@ button {
 
   outline: none;
 
-  animation: showRight 0.4s ease;
 }
 
 button[disabled] {

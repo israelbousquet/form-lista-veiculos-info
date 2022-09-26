@@ -16,7 +16,7 @@ import { SharedModule } from './modules/shared/shared.module';
     AppRoutingModule,
     ModalModule.forRoot(),
     SharedModule,
-    FormModule,
+    FormModule
   ],
   exports: [],
   providers: [],

@@ -14,6 +14,7 @@ import { ListsService } from './../../services/lists.service';
 import { VeiculosService } from '../../services/veiculos.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map, switchMap } from 'rxjs';
+import { CrudService } from '../../services/crud.service';
 
 @Component({
   selector: 'app-form',
@@ -34,7 +35,7 @@ export class FormComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private listsService: ListsService,
-    private veiculosService: VeiculosService,
+    private veiculosService: CrudService,
     private errorAlertModalService: ErrorAlertModalService,
     private router: Router,
     private route: ActivatedRoute
@@ -56,7 +57,7 @@ export class FormComponent implements OnInit {
       renavam: ['', [Validators.required]],
       marca: ['', [Validators.required]],
       modelo: ['', [Validators.required]],
-      ano: ['', [Validators.required]],
+      ano: ['', [Validators.required, Validacoes.validaAno]],
     });
 
     this.listsService.getFipe().subscribe({

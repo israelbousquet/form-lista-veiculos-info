@@ -190,7 +190,6 @@ button {
   padding: 20px 0px;
 }
 
-
 .styled-table tbody tr:last-child {
   border: none;
 }
@@ -256,5 +255,29 @@ button {
 
   .table-content {
     width: 90%;
+  }
+}
+.container-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 60vh;
+}
+
+.spinner {
+  border: 7px solid var(--color-4);
+  border-left-color: var(--color-principal);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+
+  animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
   }
 }
