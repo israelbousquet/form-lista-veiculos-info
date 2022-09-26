@@ -233,6 +233,8 @@ button[disabled]:hover {
   width: 100%;
 
   transition: 0.15s ease-in-out;
+
+  animation: showRight .2s ease-in-out;
 }
 
 .marcasList li:hover {

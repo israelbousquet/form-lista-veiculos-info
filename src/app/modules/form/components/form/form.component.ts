@@ -19,7 +19,7 @@ import { ListsService } from './../../services/lists.service';
 import { CrudService } from '../../services/crud.service';
 
 import { ActivatedRoute, Router } from '@angular/router';
-import { combineLatest, map, switchMap } from 'rxjs';
+import { combineLatest, map, Observable, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-form',
@@ -45,37 +45,22 @@ export class FormComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // this.form = this.formBuilder.group({
-    //   id: [''],
-    //   placa: [
-    //     '',
-    //     [
-    //       Validators.required,
-    //       Validators.minLength(7),
-    //       Validators.maxLength(7),
-    //       Validacoes.validaPlaca,
-    //     ],
-    //   ],
-    //   chassi: ['', [Validators.required]],
-    //   renavam: ['', [Validators.required]],
-    //   marca: ['', [Validators.required]],
-    //   modelo: ['', [Validators.required]],
-    //   ano: ['', [Validators.required, Validacoes.validaAno]],
-    // });
-
-    this.form = new FormGroup({
-      id: new FormControl(''),
-      placa: new FormControl('', [
-        Validators.required,
-        Validators.minLength(7),
-        Validators.maxLength(7),
-        Validacoes.validaPlaca,
-      ]),
-      chassi: new FormControl('', [Validators.required]),
-      renavam: new FormControl('', [Validators.required]),
-      marca: new FormControl('', [Validators.required]),
-      modelo: new FormControl('', [Validators.required]),
-      ano: new FormControl('', [Validators.required]),
+    this.form = this.formBuilder.group({
+      id: [''],
+      placa: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(7),
+          Validators.maxLength(7),
+          Validacoes.validaPlaca,
+        ],
+      ],
+      chassi: ['', [Validators.required]],
+      renavam: ['', [Validators.required]],
+      marca: ['', [Validators.required]],
+      modelo: ['', [Validators.required]],
+      ano: ['', [Validators.required, Validacoes.validaAno]],
     });
 
     this.listsService.getFipe().subscribe({

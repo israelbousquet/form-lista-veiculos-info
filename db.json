@@ -44,6 +44,24 @@
       "marca": "Fiat",
       "modelo": "create",
       "ano": "2022"
+    },
+    {
+      "id": 6,
+      "placa": "LOT4566",
+      "chassi": "NOVOOO",
+      "renavam": "999999999",
+      "marca": "ALTEREI",
+      "modelo": "civic",
+      "ano": "2022"
+    },
+    {
+      "id": 7,
+      "placa": "LDR4678",
+      "chassi": "56465656565",
+      "renavam": "999999999",
+      "marca": "Honda",
+      "modelo": "ffaaaaa",
+      "ano": "2022"
     }
   ]
 }
