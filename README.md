@@ -65,3 +65,6 @@ Assim será criado um server db.json com valor padrão
 rxjs                            7.5.7
 typescript                      4.7.4
 ```
+
+### Detalhes
+Servidor rodando localmente, então o acesso ao github pages não terá todas as funcionalidades do projeto local
