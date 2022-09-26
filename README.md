@@ -38,3 +38,6 @@ Assim será criado um server db.json
 ### Versão Node.js
 v16.17.0
 
+### Versão npm
+8.15.0
+
