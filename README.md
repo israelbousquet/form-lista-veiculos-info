@@ -33,3 +33,8 @@ Caso deseje rodar seu próprio servidor
 npm i json-server
 ```
 Assim será criado um server db.json
+
+
+### Versão Node.js
+v16.17.0
+
