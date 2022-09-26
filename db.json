@@ -80,6 +80,15 @@
       "marca": "NOVISSIMO",
       "modelo": "uhull",
       "ano": "2006"
+    },
+    {
+      "id": 10,
+      "placa": "LOT4566",
+      "chassi": "NOVOOO",
+      "renavam": "948938383",
+      "marca": "Ferrari",
+      "modelo": "uhull",
+      "ano": "2015"
     }
   ]
 }
