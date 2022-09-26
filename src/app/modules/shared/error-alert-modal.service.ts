@@ -15,13 +15,13 @@ export class ErrorAlertModalService {
     bsModalRef.content.tipo = tipo;
     bsModalRef.content.message = message;
 
-    if(timeOut){
-      setTimeout(() => bsModalRef.hide(), timeOut)
+    if (timeOut) {
+      setTimeout(() => bsModalRef.hide(), timeOut);
     }
   }
 
   alertError(message: string) {
-    this.showAlert(message, 'erro', 2000);
+    this.showAlert(message, 'erro', 3000);
   }
 
   alertSucess(message: string) {
