@@ -3,37 +3,32 @@
   --color-principal-light: #ffe08c;
   --color-principal-hover: #ffae00;
 
-  --color-reset: var(--color-3);
-  --color-reset-hover: rgb(212, 44, 44);
-  --color-cadastro: rgb(45,195,45);
-
   --color-0: #ffffff;
   --color-1: #333;
   --color-2: #616161;
   --color-3: #8d8d8d;
-  --color-4: #e9e9e9;
-  --color-5: #f5f5f5;
+  --color-4: #c4c4c4;
+  --color-5: #e9e9e9;
+  --color-6: #f5f5f5;
 
-  --deg-principal: rgb(250, 200, 3);
-  --deg-secondary: rgb(45,195,45);
-
-  --color-green: rgb(45,195,45);
+  --color-green: rgb(45, 195, 45);
   --color-green-hover: rgb(41, 224, 41);
   --color-red: rgb(212, 44, 44);
   --color-red-hover: rgb(255, 23, 23);
 
-  --color-disabled-hover: #a7a7a7be;
-  
+  --color-green-bg: rgb(182, 255, 186);
+  --color-green-bg-title: rgb(25, 145, 14);
+
+  --color-red-bg: rgb(255, 182, 182);
+  --color-red-bg-title: rgb(172, 16, 16);
+
+  --color-shadow: rgba(0, 0, 0, 0.1);
 }
 
-.color-0{
+.color-0 {
   color: var(--color-0);
 }
 
 .color-1 {
   color: var(--color-1);
-}
-
-.deg-principal {
-  color: var(--deg-principal);
 }

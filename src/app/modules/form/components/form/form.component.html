@@ -74,10 +74,10 @@
               <div class="marcasList" *ngIf="filterFipeArray.length">
                 <ul>
                   <li
-                    *ngFor="let item of filterFipeArray"
-                    (click)="setValueFipe(item.nome)"
+                    *ngFor="let marca of filterFipeArray"
+                    (click)="setValueFipe(marca.nome)"
                   >
-                    {{ item.nome }}
+                    {{ marca.nome }}
                   </li>
                 </ul>
               </div>

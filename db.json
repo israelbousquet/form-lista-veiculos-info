@@ -2,47 +2,47 @@
   "veiculos": [
     {
       "id": 1,
-      "placa": "sdadm1212",
-      "chassi": "56465656565",
-      "renavam": "948938383",
-      "marca": "VW - VolksWagen",
-      "modelo": "EDITEI DE NOVO",
-      "ano": "2014"
-    },
-    {
-      "id": 2,
-      "placa": "sdadm1212",
+      "placa": "LOT4566",
       "chassi": "56465656565",
       "renavam": "999999999",
-      "marca": "VW - VolksWagen",
-      "modelo": "gol",
+      "marca": "Honda",
+      "modelo": "Edit",
       "ano": "2021"
     },
     {
-      "id": 3,
-      "placa": "sdadm1212",
-      "chassi": "56465656565",
+      "id": 2,
+      "placa": "LDR4678",
+      "chassi": "12344dfdf",
       "renavam": "948938383",
-      "marca": "Honda",
-      "modelo": "EDIT",
-      "ano": "2016"
+      "marca": "Dodge",
+      "modelo": "AAA",
+      "ano": "2014"
+    },
+    {
+      "id": 3,
+      "placa": "LDR4678",
+      "chassi": "56465656565",
+      "renavam": "999999999",
+      "marca": "Rover",
+      "modelo": "Rover Fast V8",
+      "ano": "2006"
     },
     {
       "id": 4,
-      "placa": "LOT4566",
-      "chassi": "56465656565",
+      "placa": "LDR4678",
+      "chassi": "12344dfdf",
       "renavam": "948938383",
-      "marca": "Fiat",
-      "modelo": "siena",
-      "ano": "2022"
+      "marca": "GREAT WALL",
+      "modelo": "model great",
+      "ano": "2021"
     },
     {
       "id": 5,
-      "placa": "LOT4567",
-      "chassi": "NOVOOO",
-      "renavam": "999999999",
+      "placa": "LDR4678",
+      "chassi": "56465656565",
+      "renavam": "948938383",
       "marca": "Fiat",
-      "modelo": "siena",
+      "modelo": "create",
       "ano": "2022"
     }
   ]

@@ -1,42 +1,33 @@
-.font-1xl{
+.font-1xl {
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.font-1-xxl{
+.font-1-xxl {
   font-size: 2.2rem;
   font-weight: 700;
+
+  line-height: 1.2;
 }
 
-.font-1-md{
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-@media (max-width: 800px){
-  .font-1-xxl{
+@media (max-width: 800px) {
+  .font-1-xxl {
     font-size: 1.8rem;
-  }
-
-  .font-1-md{
-    font-size: 1rem;
-    font-weight: 600;
   }
 }
 
 @media (max-width: 650px) {
-  .font-1xl{
+  .font-1xl {
     font-size: 1.4rem;
   }
 
-  .font-1-xxl{
+  .font-1-xxl {
     font-size: 1.8rem;
   }
 }
 
-@media (max-width: 450px){
-
-  .font-1-xxl{
+@media (max-width: 450px) {
+  .font-1-xxl {
     font-size: 1.4rem;
   }
 }

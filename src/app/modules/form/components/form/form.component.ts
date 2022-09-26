@@ -1,6 +1,11 @@
 import { ErrorAlertModalService } from 'src/app/modules/shared/error-alert-modal.service';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import {
+  FormBuilder,
+  Validators,
+  FormGroup,
+  FormControl,
+} from '@angular/forms';
 
 //validators
 import { Validacoes } from '../../Validators/valicacoes';
@@ -11,10 +16,10 @@ import { VeiculoList } from '../../interfaces/veiculo-list';
 
 //services
 import { ListsService } from './../../services/lists.service';
-import { VeiculosService } from '../../services/veiculos.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { map, switchMap } from 'rxjs';
 import { CrudService } from '../../services/crud.service';
+
+import { ActivatedRoute, Router } from '@angular/router';
+import { combineLatest, map, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-form',
@@ -22,8 +27,6 @@ import { CrudService } from '../../services/crud.service';
   styleUrls: ['./form.component.css'],
 })
 export class FormComponent implements OnInit {
-  @Output() public emitVeiculosList = new EventEmitter();
-
   public fipeListArray: Array<FipeList> = [];
 
   public filterFipeArray: Array<any> = [];
@@ -42,22 +45,37 @@ export class FormComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.form = this.formBuilder.group({
-      id: [''],
-      placa: [
-        '',
-        [
-          Validators.required,
-          Validators.minLength(7),
-          Validators.maxLength(7),
-          Validacoes.validaPlaca,
-        ],
-      ],
-      chassi: ['', [Validators.required]],
-      renavam: ['', [Validators.required]],
-      marca: ['', [Validators.required]],
-      modelo: ['', [Validators.required]],
-      ano: ['', [Validators.required, Validacoes.validaAno]],
+    // this.form = this.formBuilder.group({
+    //   id: [''],
+    //   placa: [
+    //     '',
+    //     [
+    //       Validators.required,
+    //       Validators.minLength(7),
+    //       Validators.maxLength(7),
+    //       Validacoes.validaPlaca,
+    //     ],
+    //   ],
+    //   chassi: ['', [Validators.required]],
+    //   renavam: ['', [Validators.required]],
+    //   marca: ['', [Validators.required]],
+    //   modelo: ['', [Validators.required]],
+    //   ano: ['', [Validators.required, Validacoes.validaAno]],
+    // });
+
+    this.form = new FormGroup({
+      id: new FormControl(''),
+      placa: new FormControl('', [
+        Validators.required,
+        Validators.minLength(7),
+        Validators.maxLength(7),
+        Validacoes.validaPlaca,
+      ]),
+      chassi: new FormControl('', [Validators.required]),
+      renavam: new FormControl('', [Validators.required]),
+      marca: new FormControl('', [Validators.required]),
+      modelo: new FormControl('', [Validators.required]),
+      ano: new FormControl('', [Validators.required]),
     });
 
     this.listsService.getFipe().subscribe({

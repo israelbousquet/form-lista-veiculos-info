@@ -9,10 +9,9 @@ import { ErrorAlertComponent } from 'src/app/modules/shared/error-alert/error-al
 
 //interface
 import { VeiculoList } from '../../interfaces/veiculo-list';
-import { CrudService } from '../../services/crud.service';
 
 //services
-import { VeiculosService } from '../../services/veiculos.service';
+import { CrudService } from '../../services/crud.service';
 
 @Component({
   selector: 'app-lista-veiculos',
@@ -54,7 +53,6 @@ export class ListaVeiculosComponent implements OnInit {
   onRefresh() {
     this.veiculos$ = this.veiculosService.getListVeiculos().pipe(
       catchError((error) => {
-        console.log(error);
         this.handleError();
         return of();
       })

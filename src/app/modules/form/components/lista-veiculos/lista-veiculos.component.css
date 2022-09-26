@@ -95,48 +95,18 @@ button {
   transform: scale(1.06);
 }
 
-.table td {
-  vertical-align: middle;
-  margin: 0 auto;
-}
-
-.table tbody tr {
-  height: 100px;
-}
-
-.lista-veiculos-container {
-  display: flex;
-  justify-content: center;
-
-  width: 80%;
-  margin: 0 auto;
-
-  border: 1.5px solid var(--color-4);
-  border-radius: 10px;
-
-  padding: 2rem;
-}
-
 .table-container {
   width: 100%;
-  margin: auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   animation: showUp 0.2s;
 }
 
 .table-content {
-  border-collapse: collapse;
   margin: 0 auto;
-
   width: 95%;
 
   font-size: 0.9em;
   min-width: 400px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px var(--color-shadow);
 
   padding: 1.5rem;
 
@@ -153,7 +123,7 @@ button {
   text-align: left;
   font-size: 1rem;
 
-  border-bottom: 2px solid var(--color-4);
+  border-bottom: 2px solid var(--color-5);
 }
 
 .styled-table thead tr th {
@@ -179,10 +149,15 @@ button {
   font-size: 1rem;
   font-weight: 600;
   color: var(--color-1);
+
+  word-break: break-all;
+  max-width: 200px;
+
+  line-height: 1.25;
 }
 
 .styled-table tbody tr {
-  border-bottom: 3px solid var(--color-4);
+  border-bottom: 2px solid var(--color-6);
   transition: 0.15s ease-in-out;
 
   background-color: var(--color-0);
@@ -195,7 +170,7 @@ button {
 }
 
 .styled-table tbody tr:hover {
-  background-color: var(--color-5);
+  background-color: var(--color-6);
 }
 
 @media (max-width: 1200px) {
@@ -246,7 +221,7 @@ button {
   }
 
   .styled-table td:not(:first-child) {
-    border-top: 1px solid var(--color-4);
+    border-top: 1px solid var(--color-5);
   }
 
   .actions {
@@ -255,29 +230,5 @@ button {
 
   .table-content {
     width: 90%;
-  }
-}
-.container-spinner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  height: 60vh;
-}
-
-.spinner {
-  border: 7px solid var(--color-4);
-  border-left-color: var(--color-principal);
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-
-  animation: spinner 1s linear infinite;
-}
-
-@keyframes spinner {
-  to {
-    transform: rotate(360deg);
   }
 }

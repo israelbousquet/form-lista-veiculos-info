@@ -15,19 +15,19 @@
 }
 
 .erro{
-  background-color: rgb(255, 182, 182);
+  background-color: var(--color-red-bg);
 }
 
 .erro span{
-  color: rgb(172, 16, 16);
+  color: var(--color-red-bg-title);
 }
 
 .sucess{
-  background-color: rgb(182, 255, 186);
+  background-color: var(--color-green-bg);
 }
 
 .sucess span{
-  color: rgb(25, 145, 14);
+  color: var(--color-green-bg-title);
 }
 
 

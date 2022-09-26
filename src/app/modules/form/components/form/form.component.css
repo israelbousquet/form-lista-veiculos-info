@@ -1,11 +1,6 @@
 .container-form {
   width: 85%;
-
   margin: 0 auto;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .form-group {
@@ -22,7 +17,7 @@
   width: 100%;
   background-color: var(--color-0);
 
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 5px 20px var(--color-shadow);
 
   padding: 4rem;
 
@@ -83,12 +78,12 @@ button {
 }
 
 button[disabled] {
-  background-color: var(--color-3);
+  background-color: var(--color-4);
   cursor: text;
 }
 
 button[disabled]:hover {
-  background-color: var(--color-disabled-hover);
+  background-color: var(--color-3);
 }
 
 .btn-resetar {
@@ -133,14 +128,14 @@ button[disabled]:hover {
 }
 
 .input-box input.disabled-input {
-  background-color: var(--color-4);
+  background-color: var(--color-5);
 }
 
 .input-box input {
   padding: 0.6rem 0.9rem;
   border: none;
   border-radius: 5px;
-  box-shadow: 0px 0px 0px 1px #0e0e0e21;
+  box-shadow: 0px 0px 0px 1px var(--color-5);
   width: 100%;
 
   /* transition: box-shadow .1s ease-in-out; */
@@ -151,16 +146,16 @@ button[disabled]:hover {
 }
 
 .input-box input[readonly] {
-  background-color: var(--color-4);
+  background-color: var(--color-5);
   cursor: not-allowed;
 }
 
 .input-box input[readonly]:hover {
-  box-shadow: 0px 0px 0px 1px #0e0e0e21;
+  box-shadow: 0px 0px 0px 1px var(--color-5);
 }
 
 .input-box input[readonly]:focus {
-  box-shadow: 0px 0px 0px 1px #0e0e0e21;
+  box-shadow: 0px 0px 0px 1px var(--color-5);
 }
 
 .input-box input:hover,
@@ -223,7 +218,9 @@ button[disabled]:hover {
   color: var(--color-2);
 
   background-color: var(--color-0);
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 3px 6px var(--color-shadow);
+
+  animation: showUp .2s ease-in-out;
 }
 
 .marcasList ul {
@@ -243,7 +240,7 @@ button[disabled]:hover {
 }
 
 .marcasList li ~ li {
-  border-top: 1px solid var(--color-4);
+  border-top: 1px solid var(--color-5);
 }
 
 @media (max-width: 767px) {
@@ -275,7 +272,7 @@ button[disabled]:hover {
   background-color: var(--color-2);
 
   color: var(--color-0);
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 6px var(--color-shadow);
 
   border-radius: 4px;
 
@@ -302,4 +299,37 @@ button[disabled]:hover {
 #input-id:hover .modalPopupId {
   display: block;
   opacity: 1;
+}
+
+
+.container-spinner-form{
+  position: absolute;
+  max-height: 200px;
+  min-width: 200px;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 20px;
+  border-radius: 5px;
+
+  top: 5rem;
+  right: 0;
+
+  z-index: 2500;
+
+  background-color: var(--color-0);
+  box-shadow: 0px 3px 6px var(--color-shadow);
+
+  animation: showUp .2s ease-in-out;
+}
+
+.spinner{
+  border: 7px solid var(--color-5);
+  border-left-color: var(--color-principal);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+
+  animation: spinner 1s linear infinite;
 }

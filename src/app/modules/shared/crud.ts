@@ -17,13 +17,13 @@ export class Crud<T> {
     return this.http.get<T>(`${this.URL}/${id}`).pipe(take(1));
   }
 
-  createVeiculo(veiculo: T) {
-    return this.http.post(this.URL, veiculo).pipe(take(1));
+  createVeiculo(value: T) {
+    return this.http.post(this.URL, value).pipe(take(1));
   }
 
-  editVeiculo(veiculo: T) {
+  editVeiculo(value: T) {
     return this.http
-      .put(`${this.URL}/${veiculo['id' as keyof T]}`, veiculo)
+      .put(`${this.URL}/${value['id' as keyof T]}`, value)
       .pipe(take(1));
   }
 
@@ -31,11 +31,11 @@ export class Crud<T> {
     return this.http.delete(`${this.URL}/${id}`).pipe(take(1));
   }
 
-  saveVeiculo(veiculo: T) {
-    if (veiculo['id' as keyof T]) {
-      return this.editVeiculo(veiculo);
+  saveVeiculo(value: T) {
+    if (value['id' as keyof T]) {
+      return this.editVeiculo(value);
     } else {
-      return this.createVeiculo(veiculo);
+      return this.createVeiculo(value);
     }
   }
 }
