@@ -19,7 +19,6 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
-    "js2xmlparser": "^5.0.0",
     "ngx-bootstrap": "^9.0.0",
     "ngx-mask": "^14.2.3",
     "rxjs": "~7.5.0",

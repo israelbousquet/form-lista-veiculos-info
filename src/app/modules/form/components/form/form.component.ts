@@ -1,11 +1,6 @@
 import { ErrorAlertModalService } from 'src/app/modules/shared/error-alert-modal.service';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import {
-  FormBuilder,
-  Validators,
-  FormGroup,
-  FormControl,
-} from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 //validators
 import { Validacoes } from '../../Validators/valicacoes';
@@ -16,10 +11,10 @@ import { VeiculoList } from '../../interfaces/veiculo-list';
 
 //services
 import { ListsService } from './../../services/lists.service';
-import { CrudService } from '../../services/crud.service';
+import { VeiculosService } from '../../services/crud-veiculos.service';
 
 import { ActivatedRoute, Router } from '@angular/router';
-import { combineLatest, map, Observable, switchMap } from 'rxjs';
+import { map, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-form',
@@ -38,7 +33,7 @@ export class FormComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private listsService: ListsService,
-    private veiculosService: CrudService,
+    private veiculosService: VeiculosService,
     private errorAlertModalService: ErrorAlertModalService,
     private router: Router,
     private route: ActivatedRoute
@@ -90,16 +85,23 @@ export class FormComponent implements OnInit {
       msgError = 'Erro ao atualizar veículo. Tente novamente!';
     }
     this.veiculosService.saveVeiculo(this.form.value).subscribe({
-      next: (success) => {
+      next: () => {
         this.router.navigate(['']);
         this.errorAlertModalService.alertSucess(msgSuccess);
       },
-      error: (error) => this.errorAlertModalService.alertError(msgError),
+      error: () => this.errorAlertModalService.alertError(msgError),
     });
   }
 
   onReset() {
-    this.form.reset();
+    this.form.patchValue({
+      placa: '',
+      chassi: '',
+      renavam: '',
+      marca: '',
+      modelo: '',
+      ano: '',
+    });
   }
 
   consultaFipe(text: string) {

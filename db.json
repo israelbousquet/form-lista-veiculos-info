@@ -62,6 +62,24 @@
       "marca": "Honda",
       "modelo": "ffaaaaa",
       "ano": "2022"
+    },
+    {
+      "id": 8,
+      "placa": "LOT4566",
+      "chassi": "56465656565",
+      "renavam": "948938383",
+      "marca": "ALTERADO",
+      "modelo": "create",
+      "ano": "2006"
+    },
+    {
+      "id": 9,
+      "placa": "LOT4566",
+      "chassi": "NOVOOOoooo",
+      "renavam": "999999999",
+      "marca": "NOVO",
+      "modelo": "uhull",
+      "ano": "2006"
     }
   ]
 }

@@ -1,17 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Observable, catchError, of, Subject } from 'rxjs';
 import { ErrorAlertModalService } from 'src/app/modules/shared/error-alert-modal.service';
-
-//components
-import { ErrorAlertComponent } from 'src/app/modules/shared/error-alert/error-alert.component';
 
 //interface
 import { VeiculoList } from '../../interfaces/veiculo-list';
 
 //services
-import { CrudService } from '../../services/crud.service';
+import { VeiculosService } from '../../services/crud-veiculos.service';
 
 @Component({
   selector: 'app-lista-veiculos',
@@ -21,10 +17,8 @@ import { CrudService } from '../../services/crud.service';
 export class ListaVeiculosComponent implements OnInit {
   public veiculos$!: Observable<VeiculoList[]>;
 
-  public error$ = new Subject<boolean>();
-
   constructor(
-    private veiculosService: CrudService,
+    private veiculosService: VeiculosService,
     private errorAlertModalService: ErrorAlertModalService,
     private router: Router,
     private route: ActivatedRoute
@@ -46,13 +40,13 @@ export class ListaVeiculosComponent implements OnInit {
 
   onRemove(veiculo: any) {
     this.veiculosService.removeVeiculo(veiculo.id).subscribe({
-      next: (success) => this.onRefresh(),
+      next: () => this.onRefresh(),
     });
   }
 
   onRefresh() {
     this.veiculos$ = this.veiculosService.getListVeiculos().pipe(
-      catchError((error) => {
+      catchError(() => {
         this.handleError();
         return of();
       })
