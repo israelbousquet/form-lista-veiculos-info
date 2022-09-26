@@ -1,5 +1,7 @@
 # Form Veículos
 
+Indico rodar os códigos via terminal Git Bash - https://git-scm.com/downloads
+
 ## Manual para rodar projeto
 
 ### Baixar Angular CLI - (terminal)
