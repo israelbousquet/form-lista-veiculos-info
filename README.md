@@ -36,9 +36,19 @@ Assim será criado um server db.json
 
 ## Versões
 
-### Versão Node.js
+#### Node.js
 ```v16.17.0```
 
-### Versão npm
+#### npm
 ```8.15.0```
+
+#### Angular CLI
+
+```@angular-devkit/architect       0.1402.3```
+```@angular-devkit/build-angular   14.2.3```
+```@angular-devkit/core            14.2.3```
+```@angular-devkit/schematics      14.2.3```
+```@schematics/angular             14.2.3```
+```rxjs                            7.5.7```
+```typescript                      4.7.4```
 
