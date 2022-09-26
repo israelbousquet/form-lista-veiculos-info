@@ -2,24 +2,15 @@
   "veiculos": [
     {
       "id": 1,
-      "placa": "LOT4566",
-      "chassi": "56465656565",
-      "renavam": "999999999",
-      "marca": "Honda",
-      "modelo": "AAAAAAAAA",
-      "ano": "2021"
-    },
-    {
-      "id": 2,
       "placa": "LDR4678",
       "chassi": "12344dfdf",
       "renavam": "948938383",
       "marca": "Dodge",
-      "modelo": "AAA",
+      "modelo": "dodgeModel",
       "ano": "2014"
     },
     {
-      "id": 3,
+      "id": 2,
       "placa": "LDR4678",
       "chassi": "56465656565",
       "renavam": "999999999",
@@ -28,67 +19,22 @@
       "ano": "2006"
     },
     {
-      "id": 4,
+      "id": 3,
       "placa": "LDR4678",
       "chassi": "12344dfdf",
       "renavam": "948938383",
-      "marca": "GREAT WALL",
-      "modelo": "model great",
-      "ano": "2021"
+      "marca": "Dodge",
+      "modelo": "dodgeModel",
+      "ano": "2014"
     },
     {
-      "id": 5,
-      "placa": "LDR4678",
-      "chassi": "56465656565",
-      "renavam": "948938383",
-      "marca": "Fiat",
-      "modelo": "create",
-      "ano": "2022"
-    },
-    {
-      "id": 6,
-      "placa": "LOT4566",
-      "chassi": "NOVOOO",
-      "renavam": "999999999",
-      "marca": "ALTEREI",
-      "modelo": "civic",
-      "ano": "2022"
-    },
-    {
-      "id": 7,
+      "id": 4,
       "placa": "LDR4678",
       "chassi": "56465656565",
       "renavam": "999999999",
-      "marca": "Honda",
-      "modelo": "ffaaaaa",
-      "ano": "2022"
-    },
-    {
-      "id": 8,
-      "placa": "LOT4566",
-      "chassi": "56465656565",
-      "renavam": "948938383",
-      "marca": "ALTERADO",
-      "modelo": "create",
+      "marca": "Rover",
+      "modelo": "Rover Fast V8",
       "ano": "2006"
-    },
-    {
-      "id": 9,
-      "placa": "LOT4566",
-      "chassi": "AAAAAAAAAAAAAAAAAAA",
-      "renavam": "999999999",
-      "marca": "NOVISSIMO",
-      "modelo": "uhull",
-      "ano": "2006"
-    },
-    {
-      "id": 10,
-      "placa": "LOT4566",
-      "chassi": "TOPP",
-      "renavam": "948938383",
-      "marca": "Ferrari",
-      "modelo": "uhull",
-      "ano": "2015"
     }
   ]
 }
