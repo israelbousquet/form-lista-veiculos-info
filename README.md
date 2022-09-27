@@ -111,4 +111,4 @@ typescript                      4.7.4
 
 Servidor rodando localmente, então o acesso ao github pages não terá todas as funcionalidades do projeto local
 
-Delay no carregamento da lista simulado manualmente
+Delay no carregamento da lista de veículos cadastrados simulado manualmente
