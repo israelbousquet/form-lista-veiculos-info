@@ -10,40 +10,13 @@
       "ano": "2014"
     },
     {
-      "id": 2,
-      "placa": "LDR4678",
-      "chassi": "56465656565",
-      "renavam": "999999999",
-      "marca": "Rover",
-      "modelo": "Rover Fast V8",
-      "ano": "2006"
-    },
-    {
       "id": 3,
       "placa": "LDR4678",
       "chassi": "12344dfdf",
-      "renavam": "948938383",
+      "renavam": "123456789",
       "marca": "Dodge",
-      "modelo": "dodgeModel",
-      "ano": "2014"
-    },
-    {
-      "id": 4,
-      "placa": "LDR4678",
-      "chassi": "56465656565",
-      "renavam": "999999999",
-      "marca": "Rover",
-      "modelo": "Rover Fast V8",
-      "ano": "2006"
-    },
-    {
-      "id": 5,
-      "placa": "LOT4567",
-      "chassi": "56465656565",
-      "renavam": "999999999",
-      "marca": "Daihatsu",
-      "modelo": "DaihaModel",
-      "ano": "2014"
+      "modelo": "TESTE",
+      "ano": "2018"
     },
     {
       "id": 6,
@@ -53,6 +26,15 @@
       "marca": "Troller",
       "modelo": "Troler Fast v6",
       "ano": "2006"
+    },
+    {
+      "id": 7,
+      "placa": "QQP9900",
+      "chassi": "75247589247589",
+      "renavam": "584759847",
+      "marca": "Toyota",
+      "modelo": "COROLA",
+      "ano": "2021"
     }
   ]
 }

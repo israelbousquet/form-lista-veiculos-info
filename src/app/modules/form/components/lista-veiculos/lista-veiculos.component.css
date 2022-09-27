@@ -41,10 +41,10 @@
   transform: scale(1.06);
 }
 
-@media (max-width: 550px){
+@media (max-width: 550px) {
   .novo-veiculo button {
     padding: 1rem 1.4rem;
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .novo-veiculo-container {
@@ -124,6 +124,7 @@ button {
 .styled-table thead tr th {
   font-weight: 500;
 }
+
 .veiculo-lista-item td {
   animation: showRight 0.4s ease;
 }
