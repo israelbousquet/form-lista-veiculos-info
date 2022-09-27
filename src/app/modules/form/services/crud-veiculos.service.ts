@@ -13,12 +13,10 @@ export class VeiculosService {
   constructor(private http: HttpClient) {}
 
   getListVeiculos() {
-    return this.http.get<VeiculoList[]>(this.API).pipe(
-      delay(1000)
-    );
+    return this.http.get<VeiculoList[]>(this.API).pipe(delay(1000));
   }
 
-  editById(id: any) {
+  returnParamsId(id: any) {
     return this.http.get<VeiculoList[]>(`${this.API}/${id}`).pipe(take(1));
   }
 
@@ -30,7 +28,7 @@ export class VeiculosService {
     return this.http.put(`${this.API}/${veiculo.id}`, veiculo).pipe(take(1));
   }
 
-  removeVeiculo(id: any){
+  removeVeiculo(id: any) {
     return this.http.delete(`${this.API}/${id}`).pipe(take(1));
   }
 

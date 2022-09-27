@@ -65,10 +65,10 @@ export class FormComponent implements OnInit {
     this.route.params
       .pipe(
         map((params: any) => params['id']),
-        switchMap((id) => this.veiculosService.editById(id))
+        switchMap((id) => this.veiculosService.returnParamsId(id))
       )
       .subscribe({
-        next: (veiculo) => this.setValuesForm(veiculo),
+        next: (dadosVeiculo) => this.setValuesForm(dadosVeiculo),
       });
   }
 
@@ -84,6 +84,7 @@ export class FormComponent implements OnInit {
       msgSuccess = 'Veículo atualizado com sucesso!';
       msgError = 'Erro ao atualizar veículo. Tente novamente!';
     }
+
     this.veiculosService.saveVeiculo(this.form.value).subscribe({
       next: () => {
         this.router.navigate(['']);

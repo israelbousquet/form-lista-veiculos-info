@@ -40,7 +40,7 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .form {
     padding: 1.8rem;
   }
@@ -159,8 +159,6 @@ button[disabled]:hover {
   border-radius: 5px;
   box-shadow: 0px 0px 0px 1px var(--color-5);
   width: 100%;
-
-  /* transition: box-shadow .1s ease-in-out; */
 }
 
 .input-uppercase {
@@ -201,18 +199,6 @@ button[disabled]:hover {
   font-weight: 600;
   color: var(--color-1);
   margin-bottom: 0.7rem;
-}
-
-.icon {
-  position: absolute;
-  left: 15px;
-  top: 0;
-  font-size: 1rem;
-  color: var(--color-principal);
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .marcasList {
@@ -267,7 +253,7 @@ button[disabled]:hover {
   border-top: 1px solid var(--color-5);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .marcasList {
     width: 100%;
   }

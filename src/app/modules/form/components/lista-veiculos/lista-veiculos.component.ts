@@ -25,31 +25,31 @@ export class ListaVeiculosComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.onRefresh();
-  }
-
-  handleError() {
-    this.errorAlertModalService.alertError(
-      'Erro ao carregar a lista. Tente novamente!'
-    );
+    this.loadList();
   }
 
   onEdit(id: number) {
-    this.router.navigate([`editar/${id}`], { relativeTo: this.route });
+    this.router.navigate([`editar/${id}`]);
   }
 
   onRemove(veiculo: any) {
     this.veiculosService.removeVeiculo(veiculo.id).subscribe({
-      next: () => this.onRefresh(),
+      next: () => this.loadList(),
     });
   }
 
-  onRefresh() {
+  loadList() {
     this.veiculos$ = this.veiculosService.getListVeiculos().pipe(
       catchError(() => {
-        this.handleError();
+        this.errorLoadList();
         return of();
       })
+    );
+  }
+
+  errorLoadList() {
+    this.errorAlertModalService.alertError(
+      'Erro ao carregar a lista. Tente novamente!'
     );
   }
 }

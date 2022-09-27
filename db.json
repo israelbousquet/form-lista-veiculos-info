@@ -6,7 +6,7 @@
       "chassi": "12344dfdf",
       "renavam": "948938383",
       "marca": "Dodge",
-      "modelo": "dodgeModel",
+      "modelo": "edit",
       "ano": "2014"
     },
     {
@@ -35,6 +35,24 @@
       "marca": "Honda",
       "modelo": "Rover Fast V8",
       "ano": "2006"
+    },
+    {
+      "id": 5,
+      "placa": "LOT4567",
+      "chassi": "56465656565",
+      "renavam": "999999999",
+      "marca": "Daihatsu",
+      "modelo": "daiha2",
+      "ano": "2014"
+    },
+    {
+      "id": 6,
+      "placa": "LOT4566",
+      "chassi": "12344dfdf",
+      "renavam": "999999999",
+      "marca": "Dodge",
+      "modelo": "Edit",
+      "ano": "2015"
     }
   ]
 }
