@@ -2,6 +2,8 @@
 
 Indico rodar os códigos via terminal Git Bash - https://git-scm.com/downloads
 
+Projeto rodando em modo strict padrão (true)
+
 ## Manual para rodar projeto
 
 ### Baixar Angular CLI - (terminal)
