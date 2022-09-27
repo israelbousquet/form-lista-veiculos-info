@@ -48,6 +48,33 @@ npm i json-server
 
 Assim será criado um server db.json com valor padrão
 
+#### Estrutura padrão do servidor
+
+```
+{
+  "veiculos": [
+    {
+      "id": 1,
+      "placa": "LDR4678",
+      "chassi": "12344dfdf",
+      "renavam": "948938383",
+      "marca": "Dodge",
+      "modelo": "Dodge Model",
+      "ano": "2014"
+    },
+    {
+      "id": 2,
+      "placa": "LOT4678",
+      "chassi": "56465656565",
+      "renavam": "999999999",
+      "marca": "Rover",
+      "modelo": "Rover Fast V8",
+      "ano": "2006"
+    }
+  ]
+}
+```
+
 ## Versões
 
 #### Node.js
