@@ -265,6 +265,10 @@ button[disabled]:hover {
 
     width: 80px;
   }
+
+  .marcasList li {
+    animation: none;
+  }
 }
 
 .modalPopupId {

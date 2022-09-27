@@ -1,6 +1,8 @@
 import { ErrorAlertModalService } from 'src/app/modules/shared/error-alert-modal.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { map, switchMap } from 'rxjs';
 
 //validators
 import { Validacoes } from '../../Validators/valicacoes';
@@ -11,10 +13,7 @@ import { VeiculoList } from '../../interfaces/veiculo-list';
 
 //services
 import { ListsService } from './../../services/lists.service';
-import { VeiculosService } from '../../services/crud-veiculos.service';
-
-import { ActivatedRoute, Router } from '@angular/router';
-import { map, switchMap } from 'rxjs';
+import { CrudVeiculosService } from '../../services/crud-veiculos.service';
 
 @Component({
   selector: 'app-form',
@@ -24,7 +23,7 @@ import { map, switchMap } from 'rxjs';
 export class FormComponent implements OnInit {
   public fipeListArray: Array<FipeList> = [];
 
-  public filterFipeArray: Array<any> = [];
+  public filterFipeArray: Array<FipeList> = [];
 
   public veiculosArray: Array<VeiculoList> = [];
 
@@ -33,7 +32,7 @@ export class FormComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private listsService: ListsService,
-    private veiculosService: VeiculosService,
+    private veiculosService: CrudVeiculosService,
     private errorAlertModalService: ErrorAlertModalService,
     private router: Router,
     private route: ActivatedRoute

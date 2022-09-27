@@ -16,6 +16,20 @@ npm install -g @angular/cli
 
     npm i ngx-mask
 
+#### Em caso de erro: Configurações no módulo (ngx-mask)
+
+##### NgModule Imports
+
+```
+NgxMaskModule.forRoot()
+```
+
+##### Imports
+
+```
+import { NgxMaskModule } from 'ngx-mask';
+```
+
 ### Baixar biblioteca ngx-bootstrap - (terminal) - via Angular CLI
 
 ```
@@ -26,6 +40,22 @@ ng add ngx-bootstrap
 
 ```
 npm install ngx-bootstrap --save
+```
+
+#### Em caso de erro: Configurações no módulo (ngx-mask)
+
+#### Configurações no módulo (ngx-bootstrap)
+
+##### NgModule Imports
+
+```
+ModalModule.forRoot()
+```
+
+##### Imports
+
+```
+import { ModalModule } from 'ngx-bootstrap/modal';
 ```
 
 ### Servidor REST local

@@ -6,7 +6,7 @@
       "chassi": "12344dfdf",
       "renavam": "948938383",
       "marca": "Dodge",
-      "modelo": "edit",
+      "modelo": "DodgeModel v8",
       "ano": "2014"
     },
     {
@@ -32,7 +32,7 @@
       "placa": "LDR4678",
       "chassi": "56465656565",
       "renavam": "999999999",
-      "marca": "Honda",
+      "marca": "Rover",
       "modelo": "Rover Fast V8",
       "ano": "2006"
     },
@@ -42,17 +42,17 @@
       "chassi": "56465656565",
       "renavam": "999999999",
       "marca": "Daihatsu",
-      "modelo": "daiha2",
+      "modelo": "DaihaModel",
       "ano": "2014"
     },
     {
       "id": 6,
-      "placa": "LOT4566",
-      "chassi": "12344dfdf",
-      "renavam": "999999999",
-      "marca": "Dodge",
-      "modelo": "Edit",
-      "ano": "2008"
+      "placa": "EDT4t65",
+      "chassi": "56465656565",
+      "renavam": "333333333",
+      "marca": "Troller",
+      "modelo": "Troler Fast v6",
+      "ano": "2015"
     }
   ]
 }

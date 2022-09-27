@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AbstractControl, FormControl } from '@angular/forms';
+import { AbstractControl } from '@angular/forms';
+
+//validators
 import { Validacoes } from 'src/app/modules/form/Validators/valicacoes';
 
 @Component({

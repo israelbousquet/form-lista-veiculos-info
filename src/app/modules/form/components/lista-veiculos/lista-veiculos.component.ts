@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable, catchError, of, Subject } from 'rxjs';
-import { ErrorAlertModalService } from 'src/app/modules/shared/error-alert-modal.service';
+import { Observable, catchError, of } from 'rxjs';
 
 //interface
 import { VeiculoList } from '../../interfaces/veiculo-list';
 
 //services
-import { VeiculosService } from '../../services/crud-veiculos.service';
+import { CrudVeiculosService } from '../../services/crud-veiculos.service';
+import { ErrorAlertModalService } from 'src/app/modules/shared/error-alert-modal.service';
 
 @Component({
   selector: 'app-lista-veiculos',
@@ -18,7 +18,7 @@ export class ListaVeiculosComponent implements OnInit {
   public veiculos$!: Observable<VeiculoList[]>;
 
   constructor(
-    private veiculosService: VeiculosService,
+    private veiculosService: CrudVeiculosService,
     private errorAlertModalService: ErrorAlertModalService,
     private router: Router,
     private route: ActivatedRoute
