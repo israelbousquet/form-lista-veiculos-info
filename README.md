@@ -42,7 +42,7 @@ ng add ngx-bootstrap
 npm install ngx-bootstrap --save
 ```
 
-#### Em caso de erro com o Modal: Configurações no módulo (ngx-bootstrap)
+#### > **Warning** Em caso de erro com o Modal: Configurações no módulo (ngx-bootstrap)
 
 ##### NgModule Imports
 
