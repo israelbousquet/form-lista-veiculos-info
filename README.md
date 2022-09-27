@@ -44,8 +44,6 @@ npm install ngx-bootstrap --save
 
 #### Em caso de erro: Configurações no módulo (ngx-bootstrap)
 
-#### Configurações no módulo (ngx-bootstrap)
-
 ##### NgModule Imports
 
 ```
