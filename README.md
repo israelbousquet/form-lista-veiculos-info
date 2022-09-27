@@ -46,9 +46,9 @@ Caso deseje criar seu próprio servidor
 npm i json-server
 ```
 
-Assim será criado um server db.json com valor padrão
+Assim será criado um server db.json com valor padrão definido pela biblioteca
 
-#### Estrutura padrão do servidor
+#### Estrutura padrão do servidor de veículos
 
 ```
 {
