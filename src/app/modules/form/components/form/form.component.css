@@ -11,8 +11,19 @@
   gap: 35px;
 }
 
-.form-group h1 {
-  animation: showRight 0.4s ease;
+.form-group h2::after {
+  content: "";
+  display: block;
+
+  width: 2rem;
+  height: 5px;
+  margin-top: 6px;
+  position: absolute;
+
+  background-color: var(--color-principal);
+  border-radius: 10px;
+
+  animation: showLeft 0.5s ease;
 }
 
 .form {
@@ -168,6 +179,7 @@ button[disabled]:hover {
 .input-box input[readonly] {
   background-color: var(--color-5);
   cursor: not-allowed;
+  min-width: 40px;
 }
 
 .input-box input[readonly]:hover {
@@ -313,6 +325,10 @@ button[disabled]:hover {
 #input-id:hover .modalPopupId {
   display: block;
   opacity: 1;
+}
+
+#input-id input {
+  padding: 0.6rem 0.1rem 0.6rem 0.9rem;
 }
 
 .container-spinner-form {
