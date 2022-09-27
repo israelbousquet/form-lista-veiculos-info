@@ -6,23 +6,23 @@
   padding: 1rem;
 }
 
-.alert-container span{
+.alert-container span {
   font-weight: 500;
 }
 
-.erro{
+.erro {
   background-color: var(--color-red-bg);
 }
 
-.erro span{
+.erro span {
   color: var(--color-red-bg-title);
 }
 
-.sucess{
+.sucess {
   background-color: var(--color-green-bg);
 }
 
-.sucess span{
+.sucess span {
   color: var(--color-green-bg-title);
 }
 
@@ -34,6 +34,8 @@ button {
 
   padding: 10px;
   background-color: transparent;
+
+  outline: none;
 }
 
 button span {
