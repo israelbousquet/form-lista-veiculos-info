@@ -102,8 +102,6 @@ export class FormComponent implements OnInit {
       modelo: '',
       ano: '',
     });
-
-    console.log(this.form)
   }
 
   onReload() {
